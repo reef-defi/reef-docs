@@ -17,15 +17,23 @@ toc: true
 
 There are two main ways to get started with Reef:
 
-### Build your first DeFi app
+### For Developers
 
-{{< alert icon="👉" text="The Tutorial is intended for novice to intermediate users." >}}
+{{< alert icon="👉" text="The Quick Start is intended for novice to intermediate users." >}}
+Get started with Reef by installing the Reef node, and deploying a simple DeFi app locally [Quick Start]({{< ref "quick-start" >}}).
 
-Step-by-step instructions on how to start a new Doks project. [Tutorial →]()
+{{< alert icon="👉" text="The Developer guide is intended for intermediate to advanced users." >}}
+For in depth tutorials on the underlying aspects of the Reef chain check out the [Developer Guide]({{< ref "quick-start" >}}) and the [Developer Resources]({{< ref "resources" >}}).
 
-### Deploy your app on Reef chain
+### For Validators
 
-{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." >}}
+Validators and Nominators are essential to the Reef ecosystem.
 
-One page summary of how to start a new Doks project. [Quick Start →]({{< ref "quick-start" >}})
+#### Nominators
+Learn how to stake your Reef tokens and participate in the validator elections. Earn APY on your
+stake.
 
+#### Validators
+Learn how to run Reef Validator Nodes. Become part of the Reef community by providing infrastructure
+services, DeFi primitives and more. Participate in the Validator elections to have a chance of
+becoming a paid block producer.
