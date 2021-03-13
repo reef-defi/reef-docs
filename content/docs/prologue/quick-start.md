@@ -125,8 +125,22 @@ yarn deploy
 
 ## Interact with a smart contract
 
-(polkadot.js ui todo)
+There are multiple ways to interact with the contract.
+On the lowest level, we can use a web3 client such as xxx (Python) and xxx (TypeScript).
+On the high level we can use a UI, such as polkadot.js, a block explorer or a
+custom UI for a specific contract.
 
-### Next steps
+Here is how we can call a function on our smart contract in TypeScript:
+
+```typescript
+// TODO
+```
+
+Now lets call the same function through the UI:
+
+// TODO
+
+
+## Next steps
 
 Congratulations. You now have a running development node with the first smart contract. You and now are ready to start building your first DeFi app.
