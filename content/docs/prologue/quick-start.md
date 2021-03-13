@@ -1,7 +1,7 @@
 ---
 title: "Quick Start"
 description: "Get quickly up and running with Reef chain"
-lead: "Get quickly up and running with Reef chain"
+lead: ""
 date: 2020-11-16T13:59:39+01:00
 lastmod: 2020-11-16T13:59:39+01:00
 draft: false
@@ -21,22 +21,26 @@ The guide is broken into 3 parts:
  - deploying and running your first smart contract
 
 
-# Setting up a development node
+## Setting up a development node
 
-## Requirements
+### Requirements
 
 Reef chain is written in [Rust →](https://www.rust-lang.org/). A basic familiarity with Rust tooling is required.
 
 
 ### Clone the repo
+{{< btn-copy text="git clone https://github.com/reef-defi/reef-chain" >}}
 ```bash
 git clone https://github.com/reef-defi/reef-chain
-
+```
+{{< btn-copy text="cd reef-chain" >}}
+```bash
 cd reef-chain
 ```
 
 ### Install Rust
 You can install the compiler and the toolchain with:
+{{< btn-copy text="cd reef-examples/flipper" >}}
 ```bash
 make init
 ```
@@ -44,13 +48,16 @@ make init
 ### Start a development node
 
 The `make run` command will launch a temporary node and its state will be discarded after you terminate the process.
-```bash
-make run
-```
+
 To run the temporary node with Ethereum compatibility enabled run:
+{{< btn-copy text="make eth" >}}
 ```bash
 make eth
 ```
+
+You should see an output like [this](https://i.imgur.com/Dst10UI.png) when the Reef chain starts producing blocks.
+
+
 
 ### (Optional) Run a persistent single-node chain
 
@@ -72,28 +79,51 @@ Purge the development chain's state:
 ./target/release/reef-node purge-chain --dev
 ```
 
-Start the development chain with detailed logging:
 
-```bash
-RUST_LOG=debug RUST_BACKTRACE=1 ./target/release/reef-node -lruntime=debug --dev
-```
+## Deploy a smart contract
 
-
-# Deploy a smart contract
-
-## Requirements
+### Requirements
 
 The Reef chain smart contracts are written in [Solidity →](https://docs.soliditylang.org/en/v0.8.2/).
+We can use [NPM →](https://www.npmjs.com/) or [yarn →](https://yarnpkg.com/) to install and run packages required for deploying and running Solidity smart contracts on Reef chain.
 
 
 ### Clone the examples repo
+{{< btn-copy text="git clone https://github.com/reef-defi/reef-examples" >}}
 ```bash
 git clone https://github.com/reef-defi/reef-examples
-
-cd reef-examples
 ```
 
-# Interact with a smart contract
+We are going to pick a simple Flipper contract for our demo, but feel free to
+try out other examples as well.
+{{< btn-copy text="cd reef-examples/flipper" >}}
+```bash
+cd reef-examples/flipper
+```
+
+### Install the dependencies
+{{< btn-copy text="npm i" >}}
+```bash
+npm i
+```
+
+Alternatively you can also use yarn:
+```bash
+yarn
+```
+
+### Deploy the contract
+{{< btn-copy text="npm run deploy" >}}
+```bash
+npm run deploy
+```
+
+Alternatively you can also use yarn:
+```bash
+yarn deploy
+```
+
+## Interact with a smart contract
 
 (polkadot.js ui todo)
 
