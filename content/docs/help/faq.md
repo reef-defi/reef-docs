@@ -9,40 +9,17 @@ images: []
 menu:
   docs:
     parent: "help"
-weight: 630
+weight: 610
 toc: true
 ---
 
-## Hyas?
+## Is Reef chain PoW?
+Reef chain is **not** incumbered by Proof of Waste. Furthemore, smart contract transaction **fees get burned** to align scalability incentives - validators only get paid from fixed rewards pool and have no incentive to artificially constrain the network like in Bitcoin or Ethereum.
 
-Doks is a [Hyas theme](https://gethyas.com/themes/doks/) build by the creator of Hyas.
-
-## Footer notice?
-
-Please keep it in place.
-
-## Keyboard shortcuts for search?
-
-- focus: `/`
-- select: `↓` and `↑`
-- open: `Enter`
-- close: `Esc`
-
-## Other documentation?
-
-- [Netlify](https://docs.netlify.com/)
-- [Hugo](https://gohugo.io/documentation/)
 
 ## Can I get support?
 
-Create a topic:
+- [Reef Forums]()
+- [GitHub Issues]()
+- [Developer chat]()
 
-- [Netlify Community](https://community.netlify.com/)
-- [Hugo Forums](https://discourse.gohugo.io/)
-
-## Contact the creator?
-
-Send `h-enk` a message:
-
-- [Netlify Community](https://community.netlify.com/)
-- [Hugo Forums](https://discourse.gohugo.io/)

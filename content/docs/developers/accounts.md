@@ -13,7 +13,7 @@ weight: 230
 toc: true
 ---
 
-### Generate a keypair
+## Generate a keypair
 You can create a new random mnemonic and corresponding SR25519 keypair with `reef-node key generate`:
 
 ```
@@ -25,7 +25,7 @@ Secret phrase `any member stadium combine company grass jar wood brown second bl
   SS58 Address:     5HbFDCvjGmG2VRae2KN6kkYbYaspfdGb5n7LtZf1FfqvNrDt
 ```
 
-The mnemonic can be used to also generate ED25519 or ECDSA keypairs:
+The mnemonic can be used to also obtain ED25519 or ECDSA keypairs:
 ```
 ./reef-node key inspect-key --scheme Ed25519 \
   "any member stadium combine company grass jar wood brown second blame rocket"
@@ -49,3 +49,6 @@ Output ECDSA keypair as JSON:
   "ss58Address": "5H1tqyqYgBhYky3rMwjwmR9uNrBMrm45EaF8c9UQoxuVAmRA"
 }
 ```
+
+## EVM Account
+Each Reef chain account (SR25519) also has

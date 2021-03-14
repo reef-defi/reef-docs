@@ -25,7 +25,7 @@ The guide is broken into 3 parts:
 
 ### Requirements
 
-Reef chain is written in [Rust →](https://www.rust-lang.org/). A basic familiarity with Rust tooling is required.
+Reef chain is written in [Rust](https://www.rust-lang.org/). A basic familiarity with Rust tooling is required.
 
 
 ### Clone the repo
@@ -84,8 +84,8 @@ Purge the development chain's state:
 
 ### Requirements
 
-The Reef chain smart contracts are written in [Solidity →](https://docs.soliditylang.org/en/v0.8.2/).
-We can use [NPM →](https://www.npmjs.com/) or [yarn →](https://yarnpkg.com/) to install and run packages required for deploying and running Solidity smart contracts on Reef chain.
+The Reef chain smart contracts are written in [Solidity](https://docs.soliditylang.org/en/v0.8.2/).
+We can use [NPM](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) to install and run packages required for deploying and running Solidity smart contracts on Reef chain.
 
 
 ### Clone the examples repo
@@ -107,21 +107,14 @@ cd reef-examples/flipper
 npm i
 ```
 
-Alternatively you can also use yarn:
-```bash
-yarn
-```
+Alternatively you can also use `yarn`.
 
 ### Deploy the contract
 {{< btn-copy text="npm run deploy" >}}
 ```bash
 npm run deploy
 ```
-
-Alternatively you can also use yarn:
-```bash
-yarn deploy
-```
+Alternatively you can also use `yarn deploy`.
 
 ## Interact with a smart contract
 
