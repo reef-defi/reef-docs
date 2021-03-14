@@ -27,10 +27,10 @@ Compiling, deploying and managing Solidity smart contracts by hand can be a chor
 we have developer frameworks for Python and JS/TypeScript.
 
 
-## DeFi for Python Programmers
+## Reef for Python devs
 TODO
 
-## DeFi for JS/TypeScript Programmers
+## Reef for JS/TypeScript devs
 TODO
 
 ## Reef node commands

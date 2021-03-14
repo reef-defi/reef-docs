@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 description: "Reef Chain is an EVM compatible chain for DeFi. You can use this guide to learn how to write and deploy Solidity smart contracts."
-lead: "Reef Chain is an EVM compatible chain for DeFi. You can use this guide to learn how to write and deploy Solidity smart contracts."
+lead: "Reef Chain is an EVM compatible chain for DeFi with NPoS consensus."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
@@ -15,7 +15,7 @@ toc: true
 
 ## Get started
 
-There are two main ways to get started with Reef:
+There are two main ways to get started with Reef. If you're a developer, you can deploy your DeFi project on Reef. You can also participate in Reef staking and governance.
 
 ### For Developers
 
