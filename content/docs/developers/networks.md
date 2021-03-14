@@ -14,10 +14,10 @@ toc: true
 ---
 
 ## Reef Testnet
-{{< alert icon="⚠️" text="Reef testnet tokens have no value and may be destroyed on testnet upgrades." >}}
-
 Reef testnet is a common playground for deploying and testing DeFi apps. It is
 recommended to first deploy apps on the testnet before launching on mainnet.
+
+{{< alert icon="⚠️" text="Reef testnet tokens have no value and may be destroyed on testnet upgrades." >}}
 
 ### Testnet Info Sheet
 

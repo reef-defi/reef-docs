@@ -13,7 +13,6 @@ weight: 210
 toc: true
 ---
 
-{{< alert icon="💡" text="Reef ecosystem is built for Python and JavaScript/TypeScript." >}}
 
 ## Learn Solidity
 Solidity is a programming language for writing DeFi applications. The Solidity programs are compiled
@@ -35,7 +34,9 @@ TODO
 TODO
 
 ## Reef node commands
-Here is a quick cheat-sheet with some of the most commonly used commands on the Reef node. To see all available commands and their documentation run `./reef-node help`.
+Here is a quick cheat-sheet with some of the most commonly used commands on the Reef node.
+
+{{< alert icon="💡" text="To see all commands and their documentation run <b>./reef-node help</b>" >}}
 
 
 ### Compile the node
