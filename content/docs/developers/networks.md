@@ -13,13 +13,13 @@ weight: 220
 toc: true
 ---
 
-## Reef Testnet
+## Reef testnet
 Reef testnet is a common playground for deploying and testing DeFi apps. It is
 recommended to first deploy apps on the testnet before launching on mainnet.
 
 {{< alert icon="⚠️" text="Reef testnet tokens have no value and may be destroyed on testnet upgrades." >}}
 
-### Testnet Info Sheet
+### Testnet info sheet
 
 ```
 | Key                 | Value                               |
@@ -29,13 +29,18 @@ recommended to first deploy apps on the testnet before launching on mainnet.
 | Block authoring     | BABE                                |
 | Finality            | GRANDPA                             |
 | Block Time          | 10s                                 |
-| HTTP RPC            | https://rpc-testnet.reef.finance    |
-| Websocket           | wss://rpc-testnet.reef.finance/ws   |
+| HTTP RPC            | https://rpc-testnet.reefscan.com    |
+| Websocket           | wss://rpc-testnet.reefscan.com/ws   |
 ```
+
+### Polkadot.js UI
+You can connect to the testnet UI [here](). // TODO
 
 The `types.json` file for the block explorer UI can be found [here](https://github.com/reef-defi/reef-chain/blob/master/types.json).
 
-### Start a local testnet node
+*To set the types.json go to Developer > Settings. [example](https://i.imgur.com/ShfG9v7.png)*
+
+### Start a testnet RPC node
 ```
 ./reef-node \
   --base-path /tmp/reefnode \
@@ -54,10 +59,10 @@ To make the node archival (for use with indexers or block explorers) add the `--
 
 To make the node expose wallet related methods add `--rpc-methods Unsafe` flag.
 
-## Reef Mainnet
+## Reef mainnet
 The mainnet is not live yet.
 
 ## Block explorer
 The block explorer for both networks is available at:
 
-[https://explorer.reef.finance](https://explorer.reef.finance)
+[https://reefscan.com](https://reefscan.com)

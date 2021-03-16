@@ -36,7 +36,7 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "<a href=\"https://reef.finance\">Website</a> - <a href=\"https://explorer.reef.finance\">Block Explorer</a> - <a href=\"https://github.com/reef-defi\">GitHub</a> "
+footer = "<a href=\"https://reef.finance\">Website</a> - <a href=\"https://reefscan.com\">Block Explorer</a> - <a href=\"https://github.com/reef-defi\">GitHub</a> "
 
 # Alert
 alert = false
