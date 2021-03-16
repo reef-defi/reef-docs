@@ -34,7 +34,7 @@ recommended to first deploy apps on the testnet before launching on mainnet.
 ```
 
 ### Polkadot.js UI
-You can connect to the testnet UI [here](). // TODO
+You can connect to the testnet UI [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer).
 
 The `types.json` file for the block explorer UI can be found [here](https://github.com/reef-defi/reef-chain/blob/master/types.json).
 
