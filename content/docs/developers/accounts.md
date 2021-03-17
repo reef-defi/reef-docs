@@ -25,7 +25,7 @@ Secret phrase `any member stadium combine company grass jar wood brown second bl
   SS58 Address:     5HbFDCvjGmG2VRae2KN6kkYbYaspfdGb5n7LtZf1FfqvNrDt
 ```
 
-If you already have a mnemonic (seed) you can use it to generate obtain corresponding SR25519, ED25519 or ECDSA keypairs:
+If you already have a mnemonic (seed) you can use it to obtain corresponding SR25519, ED25519 or ECDSA keypairs:
 ```
 ./reef-node key inspect-key --scheme Ed25519 \
   "any member stadium combine company grass jar wood brown second blame rocket"
