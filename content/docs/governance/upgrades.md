@@ -38,7 +38,7 @@ The on-chain upgrade can only be scheduled upon majority approval of the Techini
 ## Block Production
 **Validators** are elected by **Nominators** via NPoS. A the end of every block production *era*, [Phragmén](https://wiki.polkadot.network/docs/en/learn-phragmen#weighted-phragm%C3%A9n) elections are held.
 
-Validators and Nominators are paid out from the yearly inflation (current target rate is 4.5%). Nominators receive part of revenue share of the elected Validators they voted for, however both Validators and Nominators are slashed (penalized) if Validators misbehave (are offline or equivocating).
+Validators and Nominators are paid out from the yearly inflation (current mean target rate is 6.25%). Nominators receive part of revenue share of the elected Validators they voted for, however both Validators and Nominators are slashed (penalized) if Validators misbehave (are offline or equivocating).
 
 Learn more about about how to stake your Reef and participate as Nominator or Validator next.
 

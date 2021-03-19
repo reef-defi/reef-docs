@@ -1,7 +1,7 @@
 ---
 title: "Validators"
 description: "Reef chain validators"
-lead: "Reef chain validators"
+lead: "Become a Reef chain validator and help secure the future of Reef network."
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
@@ -33,8 +33,7 @@ Step 2: ???
 Step 3: Profit.
 
 ### Bonding
-The first step is bonding (staking) Reef tokens. This step is the same as bonding for Nominators.
-
+The first step is bonding (staking) Reef tokens. This step is the same as [bonding](/docs/governance/nominators/#bonding) for Nominators.
 ### Start the validator node
 
 Here is the sample command for spinning up a `--validator` node on `testnet`.
@@ -100,7 +99,7 @@ The last step is to signal that we want to become a validator. This is done by c
 
 ![example](https://i.imgur.com/77juTZY.png)
 
-{{< alert icon="⚠️" text="To withdraw your validator commitment simply call `session.chill()`. It will take effect in the next era." >}}
+{{< alert icon="💡" text="To withdraw your validator commitment simply call `session.chill()`. It will take effect in the next era." >}}
 
 Congratulations, you are now a candidate validator. To become elected as a Validator you will need to get Nominator's support and win the elections. Good luck!
 
