@@ -26,16 +26,12 @@ Validators's core responsibility is reliable block production. However in practi
    public good infrastructure
 
 ## Become a validator
-Step 1: Setup the validator node (this guide)
-
-Step 2: ???
-
-Step 3: Profit.
+This guide only covers setting up the validator node, however there is a lot more to being a validator than running a node.
 
 ### Bonding
 The first step is bonding (staking) Reef tokens. This step is the same as [bonding](/docs/governance/nominators/#bonding) for Nominators.
-### Start the validator node
 
+### Start the validator node
 Here is the sample command for spinning up a `--validator` node on `testnet`.
 
 ```bash
