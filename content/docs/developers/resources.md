@@ -69,9 +69,8 @@ To prune (reset) the node run:
 You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) guide on how to use the CLI to make new keypairs.
 
 
-
 ## Reef UI
 TODO
 
 ## Help
-Something something matrix.org developer chat
+You can ask technical questions in our matrix.org developer [chat](https://app.element.io/#/room/#reef:matrix.org) room `#reef:matrix.org`.

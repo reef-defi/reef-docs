@@ -19,7 +19,9 @@ Reef chain is **not** incumbered by Proof of Waste. Furthemore, smart contract t
 
 ## Can I get support?
 
-- [Reef Forums]()
-- [GitHub Issues]()
-- [Developer chat]()
+Developers:
+- [Developer chat](https://app.element.io/#/room/#reef:matrix.org)
+- [GitHub Issues](https://github.com/reef-defi/reef-chain/issues)
 
+Others:
+ - TODO
