@@ -1,7 +1,7 @@
 ---
 title: "Resources"
-description: "Reef chain tools and resources"
-lead: "Reef chain tools and resources"
+description: "Reef chain developer tools and resources."
+lead: "Reef chain developer tools and resources."
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
@@ -28,10 +28,10 @@ we have developer frameworks for Python and JS/TypeScript.
 
 
 ## Reef for Python devs
-TODO
+Reef ecosystem for Python is coming soon.
 
 ## Reef for JS/TypeScript devs
-TODO
+Javascript developers can use our [HardHat integration](https://github.com/reef-defi/hardhat-reef-chain) to develop and deploy smart contracts on Reef chain.
 
 ## Reef node commands
 Here is a quick cheat-sheet with some of the most commonly used commands on the Reef node.
@@ -71,6 +71,11 @@ You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) gui
 
 ## Reef UI
 TODO
+
+## Block explorer
+The block explorer for Reef all chain networks is available at:
+
+[https://reefscan.com](https://reefscan.com)
 
 ## Help
 You can ask technical questions in our matrix.org developer [chat](https://app.element.io/#/room/#reef:matrix.org) room `#reef:matrix.org`.

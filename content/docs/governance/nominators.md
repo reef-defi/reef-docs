@@ -1,7 +1,7 @@
 ---
 title: "Nominators"
 description: "Reef chain nominators"
-lead: "Reef chain nominators"
+lead: "Become a Reef chain nominator and earn rewards."
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false

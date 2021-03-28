@@ -1,7 +1,7 @@
 ---
 title: "Upgradability"
-description: "Reef chain upgradability and governance primer"
-lead: "Reef chain upgradability and governance primer"
+description: "Reef chain upgradability and governance primer."
+lead: "Reef chain upgradability and governance primer."
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false

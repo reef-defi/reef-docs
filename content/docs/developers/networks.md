@@ -1,7 +1,7 @@
 ---
 title: "Networks"
 description: "Reef chain networks"
-lead: "Reef chain networks"
+lead: "Reef chain's networks."
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
@@ -12,6 +12,10 @@ menu:
 weight: 220
 toc: true
 ---
+
+
+## Reef mainnet
+The mainnet is not live yet.
 
 ## Reef testnet
 Reef testnet is a common playground for deploying and testing DeFi apps. It is
@@ -59,10 +63,3 @@ To make the node archival (for use with indexers or block explorers) add the `--
 
 To make the node expose wallet related methods add `--rpc-methods Unsafe` flag.
 
-## Reef mainnet
-The mainnet is not live yet.
-
-## Block explorer
-The block explorer for both networks is available at:
-
-[https://reefscan.com](https://reefscan.com)
