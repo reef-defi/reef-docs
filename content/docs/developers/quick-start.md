@@ -85,54 +85,66 @@ Purge the development chain's state:
 ### Requirements
 
 The Reef chain smart contracts are written in [Solidity](https://docs.soliditylang.org/en/v0.8.2/).
-We can use [NPM](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) to install and run packages required for deploying and running Solidity smart contracts on Reef chain.
+We can use [yarn](https://yarnpkg.com/) to install and run packages required for deploying and running Solidity smart contracts on Reef chain. In the following example we use our plugin for a [Hardhat development environment](https://hardhat.org/) to deploy and interact with the contract.
 
 
 ### Clone the examples repo
-{{< btn-copy text="git clone https://github.com/reef-defi/reef-examples" >}}
+{{< btn-copy text="git clone https://github.com/reef-defi/hardhat-reef-examples" >}}
 ```bash
-git clone https://github.com/reef-defi/reef-examples
-```
-
-We are going to pick a simple Flipper contract for our demo, but feel free to
-try out other examples as well.
-{{< btn-copy text="cd reef-examples/flipper" >}}
-```bash
-cd reef-examples/flipper
+git clone https://github.com/reef-defi/hardhat-reef-examples
 ```
 
 ### Install the dependencies
-{{< btn-copy text="npm i" >}}
+{{< btn-copy text="yarn" >}}
 ```bash
-npm i
+yarn
 ```
-
-Alternatively you can also use `yarn`.
 
 ### Deploy the contract
-{{< btn-copy text="npm run deploy" >}}
+We are going to pick a simple Flipper contract for our demo, but feel free to
+try out other examples as well.
+
+{{< btn-copy text="npx hardhat run scripts/flipper/deploy.js" >}}
 ```bash
-npm run deploy
+npx hardhat run scripts/flipper/deploy.js
 ```
-Alternatively you can also use `yarn deploy`.
 
 ## Interact with a smart contract
 
+After the contract is deployed you can interact with the contract. In our Flipper example the value in the Flipper contract can be flipped by calling:
+
+{{< btn-copy text="npx hardhat run scripts/flipper/flip.js" >}}
+```bash
+npx hardhat run scripts/flipper/flip.js
+```
+
 There are multiple ways to interact with the contract.
-On the lowest level, we can use a web3 client such as xxx (Python) and xxx (TypeScript).
-On the high level we can use a UI, such as polkadot.js, a block explorer or a
-custom UI for a specific contract.
+On the lowest level, we can use a web3 client such as [bodhi.js](https://github.com/AcalaNetwork/bodhi.js) (TypeScript). We recommend using our [hardhat-reef plugin](https://www.npmjs.com/package/@reef-defi/hardhat-reef), which abstracts many of the intricacies.
 
 Here is how we can call a function on our smart contract in TypeScript:
 
 ```typescript
-// TODO
+async function main() {
+  const flipperAddress = "0x0230135fDeD668a3F7894966b14F42E65Da322e4";
+
+  await hre.reef.getContractFactory("Flipper");
+
+  const artifact = await hre.artifacts.readArtifact("Flipper");
+  const flipper = new ethers.Contract(
+    flipperAddress,
+    artifact.abi,
+    await hre.reef.getSigner()
+  );
+
+  // Call flip()
+  console.log("Current value:", await flipper.get());
+  await flipper.flip();
+  console.log("New value after flip():", await flipper.get());
+}
 ```
 
-Now lets call the same function through the UI:
-
-// TODO
-
+On the high level we can use a UI, such as polkadot.js, a block explorer or a
+custom UI for a specific contract.
 
 ## Next steps
 
