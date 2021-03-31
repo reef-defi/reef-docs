@@ -29,7 +29,7 @@ Reef chain is written in [Rust](https://www.rust-lang.org/). A basic familiarity
 
 
 ### Clone the repo
-{{< btn-copy text="git clone https://github.com/reef-defi/reef-chain" >}}
+{{< btn-copy text="git clone --recurse-submodules https://github.com/reef-defi/reef-chain" >}}
 ```bash
 git clone https://github.com/reef-defi/reef-chain
 ```
