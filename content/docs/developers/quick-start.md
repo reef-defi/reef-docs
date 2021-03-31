@@ -40,7 +40,7 @@ cd reef-chain
 
 ### Install Rust
 You can install the compiler and the toolchain with:
-{{< btn-copy text="cd reef-examples/flipper" >}}
+{{< btn-copy text="make init" >}}
 ```bash
 make init
 ```
