@@ -29,10 +29,11 @@ recommended to first deploy apps on the testnet before launching on mainnet.
 | Key                 | Value                               |
 | ------------------- | ----------------------------------- |
 | SS58 Format         | 42                                  |
-| Currency, Precision | REEF, 10                            |
+| Currency, Precision | REEF, 18                            |
 | Block authoring     | BABE                                |
 | Finality            | GRANDPA                             |
 | Block Time          | 10s                                 |
+| Block Size          | 1.25MB to 3.75MB                    |
 | HTTP RPC            | https://rpc-testnet.reefscan.com    |
 | Websocket           | wss://rpc-testnet.reefscan.com/ws   |
 ```
