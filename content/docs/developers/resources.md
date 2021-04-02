@@ -31,7 +31,7 @@ we have developer frameworks for Python and JS/TypeScript.
 Reef ecosystem for Python is coming soon.
 
 ## Reef for JS/TypeScript devs
-Javascript developers can use our [HardHat integration](https://github.com/reef-defi/hardhat-reef-chain) to develop and deploy smart contracts on Reef chain.
+Javascript developers can use our [HardHat integration](https://github.com/reef-defi/hardhat-reef) to develop and deploy smart contracts on Reef chain.
 
 ## Reef node commands
 Here is a quick cheat-sheet with some of the most commonly used commands on the Reef node.
