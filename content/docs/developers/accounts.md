@@ -40,7 +40,7 @@ Secret phrase `any member stadium combine company grass jar wood brown second bl
 
 ## EVM Account
 
-Now that we have a Reef Chain account, we need to link an EVM account to it. This can be done by either generating an EVM address or importing an existing Ethereum address.
+Now that we have a Reef Chain account, we need to link an EVM account to it. This can be done by either generating a default EVM address or importing an existing Ethereum address.
 
 {{< alert icon="⚠️" text="Each Reef account can be linked to exactly one EVM account." >}}
 
@@ -54,9 +54,11 @@ Ethereum accounts are based on ECDSA and their public keys (addresses) are hex e
 0xebdcfce3377bd7593f14a4c70ed2974d55a1ab96
 ```
 
-### Generating an EVM address
+### Generating a default EVM address
 
-Generating an EVM address is easy. We just need to call the `evmAccounts.claimDefaultAccount()` function. This will create an EVM address for our Reef chain account.
+Generating an EVM address is easy. All we have to do is use EVM, and an address will be auto-generated and assigned to our account on the first EVM call.
+
+Alternatively, we can generate the default address manually by calling the `evmAccounts.claimDefaultAccount()` function. This will create an EVM address for our Reef chain account.
 
 To see our EVM address we can call `evmAccounts.evmAddresses(AccountId)`.
 
