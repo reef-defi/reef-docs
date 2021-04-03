@@ -33,13 +33,15 @@ Reef chain is written in [Rust](https://www.rust-lang.org/). A basic familiarity
 ```bash
 git clone --recursive https://github.com/reef-defi/reef-chain
 ```
-{{< btn-copy text="cd reef-chain" >}}
-```bash
-cd reef-chain
-```
 
 ### Install Rust
-You can install the compiler and the toolchain with:
+If you don't have [Rust](https://www.rust-lang.org/tools/install) already, you can install it with:
+{{< btn-copy text="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh" >}}
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+You can install the development compiler and the toolchain with:
 {{< btn-copy text="make init" >}}
 ```bash
 make init
@@ -49,10 +51,10 @@ make init
 
 The `make run` command will launch a temporary node and its state will be discarded after you terminate the process.
 
-To run the temporary node with Ethereum compatibility enabled run:
-{{< btn-copy text="make eth" >}}
+To run the temporary (development) node run:
+{{< btn-copy text="make run" >}}
 ```bash
-make eth
+make run
 ```
 
 You should see an output like [this](https://i.imgur.com/Dst10UI.png) when the Reef chain starts producing blocks.
