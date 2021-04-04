@@ -46,10 +46,46 @@ The `types.json` file for the block explorer UI can be found [here](https://gith
 *To set the types.json go to Developer > Settings. [example](https://i.imgur.com/ShfG9v7.png)*
 
 ### Start a testnet RPC node
+If you have downloaded the official binary for Ubuntu 20.04 from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases), you can run it like so:
 ```
 ./reef-node \
   --base-path /tmp/reefnode \
   --chain testnet \
+  --port 30333 \
+  --ws-port 9944 \
+  --rpc-port 9933 \
+  --rpc-methods Auto \
+  --rpc-cors all \
+  --rpc-external \
+  --ws-external \
+  --name RPCNode
+```
+
+**If the binary is not available for your platform, you can compile it yourself:**
+
+Use `git tag` to list all available release builds:
+```bash
+git tag
+```
+
+To create a corresponding production build, first checkout the tag:
+```bash
+git checkout testnet-2.1
+```
+
+Then run this command to install appropriate compiler version and produce a binary:
+```bash
+make release
+```
+
+The last thing we need is the `chain_spec.json` file. Compiling WASM is not deterministic, yet
+we want to have matching gensis. The `chain_spec.json` file can be downloaded from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases) as well.
+
+Now we can start our node like so:
+```
+./reef-node \
+  --base-path /tmp/reefnode \
+  --chain chain_spec.json \
   --port 30333 \
   --ws-port 9944 \
   --rpc-port 9933 \
