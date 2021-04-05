@@ -13,8 +13,33 @@ weight: 210
 toc: true
 ---
 
+## Reef Chain
 
-## Learn Solidity
+### Developer Console
+You can connect to the developer UI for different networks:
+
+[Local Node](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer) | [Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer)
+
+
+{{< alert icon="💡" text="If you are opening the developer console for the first time you will need to setup Types and Metadata." >}}
+
+
+The `types.json` file for the block explorer UI can be found [here](https://github.com/reef-defi/reef-chain/blob/master/types.json).
+
+To set the types.json go to Developer > Settings. [example](https://i.imgur.com/ShfG9v7.png)
+
+The metadata syncing with the [Polkadot browser extension](https://polkadot.js.org/extension/) will be offered to you automatically. Just click accept.
+
+### Block explorer
+The block explorer for all Reef chain networks is available at:
+
+[https://reefscan.com](https://reefscan.com)
+
+----------------
+
+## DeFi
+
+### Learn Solidity
 Solidity is a programming language for writing DeFi applications. The Solidity programs are compiled
 and uploaded to Reef chain, where they run in a completely decentralized fashion.
 
@@ -26,18 +51,21 @@ Here are some great resources for learning Solidity:
 Compiling, deploying and managing Solidity smart contracts by hand can be a chore. For this reason
 we have developer frameworks for Python and JS/TypeScript.
 
-
-## Reef for Python devs
-Reef ecosystem for Python is coming soon.
-
-## Reef for JS/TypeScript devs
+### Reef for JS/TypeScript devs
 Javascript developers can use our [HardHat integration](https://github.com/reef-defi/hardhat-reef) to develop and deploy smart contracts on Reef chain.
 
-## Reef node commands
+### Reef for Python devs
+Reef ecosystem for Python is coming soon.
+
+
+----------------
+
+## Reef Node
+
+### Reef node commands
 Here is a quick cheat-sheet with some of the most commonly used commands on the Reef node.
 
 {{< alert icon="💡" text="To see all commands and their documentation run <b>./reef-node help</b>" >}}
-
 
 ### Compile the node
 If you haven't yet, compile the Reef node locally:
@@ -60,6 +88,7 @@ make build && cd target/release
   --name MyNode
 ```
 
+### Reset the local chain
 To prune (reset) the node run:
 ```
 ./target/release/reef-node purge-chain --chain dev
@@ -68,14 +97,6 @@ To prune (reset) the node run:
 ### Generate a keypair
 You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) guide on how to use the CLI to make new keypairs.
 
-
-## Reef UI
-TODO
-
-## Block explorer
-The block explorer for Reef all chain networks is available at:
-
-[https://reefscan.com](https://reefscan.com)
 
 ## Help
 You can ask technical questions in our matrix.org developer [chat](https://app.element.io/#/room/#reef:matrix.org) room `#reef:matrix.org`.

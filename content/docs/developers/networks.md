@@ -38,14 +38,7 @@ recommended to first deploy apps on the testnet before launching on mainnet.
 | Websocket           | wss://rpc-testnet.reefscan.com/ws   |
 ```
 
-### Polkadot.js UI
-You can connect to the testnet UI [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer).
-
-The `types.json` file for the block explorer UI can be found [here](https://github.com/reef-defi/reef-chain/blob/master/types.json).
-
-*To set the types.json go to Developer > Settings. [example](https://i.imgur.com/ShfG9v7.png)*
-
-### Start a testnet RPC node
+## Start a RPC node
 If you have downloaded the official binary for Ubuntu 20.04 from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases), you can run it like so:
 ```
 ./reef-node \
