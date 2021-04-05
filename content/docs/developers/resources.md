@@ -35,7 +35,6 @@ The block explorer for all Reef chain networks is available at:
 
 [https://reefscan.com](https://reefscan.com)
 
-----------------
 
 ## DeFi
 
@@ -57,8 +56,6 @@ Javascript developers can use our [HardHat integration](https://github.com/reef-
 ### Reef for Python devs
 Reef ecosystem for Python is coming soon.
 
-
-----------------
 
 ## Reef Node
 
