@@ -72,7 +72,7 @@ make release
 ```
 
 The last thing we need is the `chain_spec.json` file. Compiling WASM is not deterministic, yet
-we want to have matching gensis. The `chain_spec.json` file can be downloaded from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases) as well.
+we want to have matching genesis. The `chain_spec.json` file can be downloaded from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases) as well.
 
 Now we can start our node like so:
 ```
