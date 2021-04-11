@@ -24,7 +24,7 @@ You can connect to the developer UI for different networks:
 {{< alert icon="💡" text="If you are opening the developer console for the first time you will need to setup Types and Metadata." >}}
 
 
-The `types.json` file for the block explorer UI can be found [here](https://github.com/reef-defi/reef-chain/blob/master/types.json).
+The `types.json` file for the block explorer UI can be found [here](https://github.com/reef-defi/reef-chain/blob/master/assets/types.json).
 
 To set the types.json go to Developer > Settings. [example](https://i.imgur.com/ShfG9v7.png)
 

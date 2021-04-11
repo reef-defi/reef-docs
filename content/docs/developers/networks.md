@@ -28,8 +28,9 @@ recommended to first deploy apps on the testnet before launching on mainnet.
 ```
 | Key                 | Value                               |
 | ------------------- | ----------------------------------- |
-| SS58 Format         | 42                                  |
 | Currency, Precision | REEF, 18                            |
+| EVM chain id        | 13939                               |
+| SS58 Format         | 42                                  |
 | Block authoring     | BABE                                |
 | Finality            | GRANDPA                             |
 | Block Time          | 10s                                 |
