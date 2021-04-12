@@ -36,6 +36,11 @@ The block explorer for all Reef chain networks is available at:
 [https://reefscan.com](https://reefscan.com)
 
 
+### EVM Playground
+You can deploy and interact with smart contracts via EVM Playground UI:
+[https://evm.reefscan.com](https://evm.reefscan.com)
+
+
 ## DeFi
 
 ### Learn Solidity
