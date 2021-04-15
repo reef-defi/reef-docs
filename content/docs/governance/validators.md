@@ -36,7 +36,7 @@ Here is the sample command for spinning up a `--validator` node on `testnet`.
 
 ```bash
 ./reef-node \
-  --base-path /tmp/alice \
+  --base-path /tmp/reefnode \
   --chain testnet \
   --validator \
   --port 30333 \
@@ -45,9 +45,8 @@ Here is the sample command for spinning up a `--validator` node on `testnet`.
   --rpc-methods Unsafe \
   --no-telemetry \
   --no-mdns \
-  --node-key 181efee6b57bfdba57cd7ca402f364aa2b4f636757a1a7ad840c6524dc0cbe08 \
   --no-telemetry \
-  --name AliceValidator
+  --name MyValidatorNode
 ```
 
 Note the `--rpc-methods Unsafe` flag. This flag is necessary to enable key management endpoints. Do not expose these endpoints to the public internet. You are solely responsible for adequate operational security.
