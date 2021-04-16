@@ -43,7 +43,6 @@ Here is the sample command for spinning up a `--validator` node on `testnet`.
   --ws-port 9944 \
   --rpc-port 9933 \
   --rpc-methods Unsafe \
-  --no-telemetry \
   --no-mdns \
   --no-telemetry \
   --name MyValidatorNode
