@@ -18,8 +18,9 @@ toc: true
 If you have downloaded the official binary for Ubuntu 20.04 from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases), you can run it like so:
 ```
 ./reef-node \
-  --base-path /tmp/reefnode \
   --chain mainnet \
+  --base-path /tmp/reefnode \
+  --pruning=archive \
   --port 30333 \
   --ws-port 9944 \
   --rpc-port 9933 \
@@ -53,8 +54,9 @@ we want to have matching genesis. The `chain_spec.json` file can be downloaded f
 Now we can start our node like so:
 ```
 ./reef-node \
-  --base-path /tmp/reefnode \
   --chain chain_spec_mainnet.json \
+  --base-path /tmp/reefnode \
+  --pruning=archive \
   --port 30333 \
   --ws-port 9944 \
   --rpc-port 9933 \
@@ -65,9 +67,7 @@ Now we can start our node like so:
   --name MyRPCNode
 ```
 
-To make the node archival (for use with indexers or block explorers) add the `--pruning=archive` flag.
-
-To make the node expose wallet related methods add `--rpc-methods Unsafe` flag.
+To make the node archival (for use with indexers or block explorers) we use the `--pruning=archive` flag. Omit this flag to run the _light_ RPC node.
 
 
 ## Start a bootnode
@@ -89,8 +89,8 @@ Now we can start our boot node with the generated private key by using the `--no
 
 ```
 ./reef-node \
-  --base-path /tmp/reefnode \
   --chain mainnet \
+  --base-path /tmp/reefnode \
   --port 30333 \
   --node-key 1ba5794ee476523629e84661ee0d28707bf43a486bb204633b789ffc226fe559 \
   --name MyBootNode
@@ -100,8 +100,8 @@ This node can now be directly connected to via from another node via `--bootnode
 
 ```bash
 ./reef-node \
-  --base-path /tmp/reefnode \
   --chain mainnet \
+  --base-path /tmp/reefnode \
   --port 30333 \
   --bootnodes /ip4/<MyBootNode-IP-ADDRESS>/tcp/30333/p2p/12D3KooWL4scSWDRaTNja1KH4Rnv7JxVKGkrSvr9XH8Li8yL5mCA
   --name MyOtherNode

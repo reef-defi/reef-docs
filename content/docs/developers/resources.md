@@ -78,8 +78,8 @@ make build && cd target/release
 ### Start the local development node
 ```
 ./reef-node \
-  --base-path /tmp/reefnode \
   --chain dev \
+  --base-path /tmp/reefnode \
   --port 30333 \
   --ws-port 9944 \
   --rpc-port 9933 \

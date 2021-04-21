@@ -28,17 +28,14 @@ Validators's core responsibility is reliable block production. However in practi
 ## Become a validator
 This guide only covers setting up the validator node, however there is a lot more to being a validator than running a node.
 
-### Bonding
-The first step is bonding (staking) Reef tokens. This step is the same as [bonding](/docs/governance/nominators/#bonding) for Nominators.
-
 ### Start the validator node
 Here is the sample command for spinning up a `--validator` node on `testnet`.
 
 ```bash
 ./reef-node \
-  --base-path /tmp/reefnode \
   --chain testnet \
   --validator \
+  --base-path /tmp/reefnode \
   --port 30333 \
   --ws-port 9944 \
   --rpc-port 9933 \
@@ -50,32 +47,23 @@ Here is the sample command for spinning up a `--validator` node on `testnet`.
 
 Note the `--rpc-methods Unsafe` flag. This flag is necessary to enable key management endpoints. Do not expose these endpoints to the public internet. You are solely responsible for adequate operational security.
 
-
 ### Setup the session keys
 {{< alert icon="🔥" text="Make sure to only execute the `author_*` commands against a secure RPC node that you own. Failure to do so may result in loss of funds." >}}
 
 There are 2 options for setting the session keys:
 
- 1.) Generate them offline and submit via `author_setKeys`
+ 1.) Let the node generate the keys via `author_rotateKeys` (recommended)
 
- 2.) Let the node generate the keys via `author_rotateKeys`
+ 2.) Generate them offline and submit via `author_setKeys`
 
-#### Generating the keys by hand
-To generate the keys by hand we can use our [keypair](/docs/developers/accounts/#generate-a-keypair) tool. Note that the GRANDPA keys are ED25519, while the rest are SR25519.
 
-We can then submit the seed+key derivation paths (suri) and the corresponding AccountId's for BABE and GRANDPA keys via RPC:
-```
-curl http://localhost:9934 -H "Content-Type:application/json;charset=utf-8" -d \
-  '{ "jsonrpc":"2.0", "id":1, "method":"author_insertKey", "params": [ "babe", "seed//babe", "0x..." ] }'
-
-curl http://localhost:9934 -H "Content-Type:application/json;charset=utf-8" -d \
-  '{ "jsonrpc":"2.0", "id":1, "method":"author_insertKey", "params": [ "babe", "seed//grandpa", "0x..." ] }'
-```
-
-{{< alert icon="⚠️" text="The validator node will need to be restarted after setting or changing GRANDPA keys." >}}
-
-#### Generating the keys within node
+#### Option 1: Generating the keys within node
 Generating the session keys (or rotating the keys) can be done by calling the `author_rotateKeys` RPC method.
+
+```
+curl http://localhost:9933 -H "Content-Type: application/json" -d \
+  '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}'
+```
 
 The result will be hex encoded:
 ```
@@ -83,10 +71,34 @@ The result will be hex encoded:
  'result': '0x4e0f43d7196b342b86c634ce6b1797e49e4ba5f01763324f2c9960ea33899561de3a616370becc71cb01775dc938f69d17b1ee0a4fd1689ede79c107f24b224c',
  'id': 7}
 ```
-The result needs to be submitted as `session.setKeys(keys, proof)` extrinsic call.
+The result needs to be submitted as `session.setKeys(keys, proof)` extrinsic call from the
+**controller** account. See bonding section below.
 
 ![example](https://i.imgur.com/LKR6q9w.png)
 
+{{< alert icon="⚠️" text="The validator node will need to be restarted after setting or changing GRANDPA keys." >}}
+
+
+#### Option 2: Inserting existing authoring keys
+This is useful if our authoring keys have been generated via [keypair](/docs/developers/accounts/#generate-a-keypair) tool.
+Note that the GRANDPA keys are ED25519, while the rest are SR25519.
+
+We can then submit the seed+key derivation paths (suri) and the corresponding AccountId's for BABE and GRANDPA keys via RPC:
+```
+curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d \
+  '{ "jsonrpc":"2.0", "id":1, "method":"author_insertKey", "params": [ "babe", "seed//babe", "0x..." ] }'
+
+curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d \
+  '{ "jsonrpc":"2.0", "id":1, "method":"author_insertKey", "params": [ "babe", "seed//grandpa", "0x..." ] }'
+```
+
+{{< alert icon="⚠️" text="The validator node will need to be restarted after setting or changing GRANDPA keys." >}}
+
+
+### Bonding
+This step is the same as when [bonding](/docs/governance/nominators/#bonding) as Nominators.
+
+Note: The controller account set via `staking.bond` should be used to make the `session.setKeys` and `session.validate` calls as well.
 
 ### Validating
 The last step is to signal that we want to become a validator. This is done by calling `session.validate(ValidatorPreferences)`.
