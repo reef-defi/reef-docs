@@ -41,6 +41,7 @@ Here is the sample command for spinning up a `--validator` node on `testnet`.
   --rpc-port 9933 \
   --rpc-methods Unsafe \
   --no-mdns \
+  --no-private-ipv4 \
   --no-telemetry \
   --name MyValidatorNode
 ```
@@ -83,13 +84,19 @@ The result needs to be submitted as `session.setKeys(keys, proof)` extrinsic cal
 This is useful if our authoring keys have been generated via [keypair](/docs/developers/accounts/#generate-a-keypair) tool.
 Note that the GRANDPA keys are ED25519, while the rest are SR25519.
 
-We can then submit the seed+key derivation paths (suri) and the corresponding AccountId's for BABE and GRANDPA keys via RPC:
+We can then submit the seed+key derivation paths (suri) and the corresponding AccountId's for all session keys via RPC:
 ```
 curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d \
   '{ "jsonrpc":"2.0", "id":1, "method":"author_insertKey", "params": [ "babe", "seed//babe", "0x..." ] }'
 
 curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d \
   '{ "jsonrpc":"2.0", "id":1, "method":"author_insertKey", "params": [ "babe", "seed//grandpa", "0x..." ] }'
+
+curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d \
+  '{ "jsonrpc":"2.0", "id":1, "method":"author_insertKey", "params": [ "imon", "seed//im-online", "0x..." ] }'
+
+curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d \
+  '{ "jsonrpc":"2.0", "id":1, "method":"author_insertKey", "params": [ "audi", "seed//authority-discovery", "0x..." ] }'
 ```
 
 {{< alert icon="⚠️" text="The validator node will need to be restarted after setting or changing GRANDPA keys." >}}
