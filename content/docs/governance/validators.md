@@ -35,7 +35,7 @@ Here is the sample command for spinning up a `--validator` node on `testnet`.
 ./reef-node \
   --chain testnet \
   --validator \
-  --base-path /tmp/reefnode \
+  --base-path /reef/validator \
   --port 30333 \
   --ws-port 9944 \
   --rpc-port 9933 \
@@ -45,6 +45,8 @@ Here is the sample command for spinning up a `--validator` node on `testnet`.
   --no-telemetry \
   --name MyValidatorNode
 ```
+
+If you have compiled your own binary, you need to pass the appropriate [chain spec file](https://github.com/reef-defi/reef-chain/tree/master/assets), ie: `--chain chain_spec_testnet.json`/`--chain chain_spec_mainnet.json` instead of `--chain testnet`/`--chain mainnet`.
 
 Note the `--rpc-methods Unsafe` flag. This flag is necessary to enable key management endpoints. Do not expose these endpoints to the public internet. You are solely responsible for adequate operational security.
 
