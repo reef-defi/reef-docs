@@ -15,7 +15,11 @@ toc: true
 
 
 ## Reef mainnet
-**The mainnet is not live yet.**
+**The Reef mainnet is launching in "canary" mode.** Reef chain is not just an Ethereum clone - is built from ground up with new blockchain
+technology, and as such carries risk of potentially disruptive bugs.
+
+While Reef chain is in "canary" mode, the chain might have to be reset in the event of catastrophic failure,
+and only REEF account balances at the time of the failure would carry over to the new network.
 
 ### Mainnet info sheet
 

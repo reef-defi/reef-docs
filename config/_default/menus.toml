@@ -46,6 +46,11 @@
   weight = 20
 
 [[footer]]
-  name = "Privacy"
-  url = "/privacy-policy/"
+  name = "About Reef"
+  url = "https://reef.finance"
   weight = 10
+[[footer]]
+  name = "Github"
+  url = "https://github.com/reef-defi"
+  weight = 20
+

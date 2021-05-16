@@ -31,10 +31,13 @@ To set the types.json go to Developer > Settings. [example](https://i.imgur.com/
 The metadata syncing with the [Polkadot browser extension](https://polkadot.js.org/extension/) will be offered to you automatically. Just click accept.
 
 ### Block explorer
-The block explorer for all Reef chain networks is available at `reefscan.com`:
+Reefscan is the main block explorer for Reef chain.
 
 [Mainnet](https://reefscan.com) | [Testnet](https://testnet.reefscan.com)
 
+### Remix IDE
+Developers can use Remix IDE for Reef chain to quickly deploy and test their smart contracts.
+[https://remix.reefscan.com](https://remix.reefscan.com/)
 
 ### EVM Playground
 You can deploy and interact with smart contracts via EVM Playground UI:
