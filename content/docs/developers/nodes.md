@@ -13,6 +13,35 @@ weight: 220
 toc: true
 ---
 
+## Reef node
+Here is a quick cheat-sheet with some of the most commonly used commands on the Reef node.
+
+{{< alert icon="💡" text="To see all commands and their documentation run <b>./reef-node help</b>" >}}
+
+### Compile the node
+If you haven't yet, compile the Reef node locally:
+```
+make build && cd target/release
+```
+
+### Generate a keypair
+You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) guide on how to use the CLI to make new keypairs.
+
+## Start the development node
+```
+./reef-node \
+  --chain dev \
+  --base-path /tmp/reefnode \
+  --port 30333 \
+  --ws-port 9944 \
+  --rpc-port 9933 \
+  --rpc-methods Auto \
+  --rpc-cors all \
+  --rpc-external \
+  --ws-external \
+  --name MyDevNode
+```
+
 
 ## Start a RPC node
 If you have downloaded the official binary for Ubuntu 20.04 from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases), you can run it like so:
@@ -109,3 +138,9 @@ This node can now be directly connected to via from another node via `--bootnode
 
 {{< alert icon="💡" text="You can also point a domain name to your node's ip and then reference it as /dns/bootnode.mydomain.com/tcp/30333/..." >}}
 
+
+## Reset the chain state
+To prune (reset) the node run:
+```
+./reef-node purge-chain --chain <dev/testnet/mainnet> --base-path /path/to/state
+```

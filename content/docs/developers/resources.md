@@ -65,43 +65,5 @@ Javascript developers can use our [HardHat integration](https://github.com/reef-
 Reef ecosystem for Python is coming soon.
 
 
-## Reef Node
-
-### Reef node commands
-Here is a quick cheat-sheet with some of the most commonly used commands on the Reef node.
-
-{{< alert icon="💡" text="To see all commands and their documentation run <b>./reef-node help</b>" >}}
-
-### Compile the node
-If you haven't yet, compile the Reef node locally:
-```
-make build && cd target/release
-```
-
-### Start the local development node
-```
-./reef-node \
-  --chain dev \
-  --base-path /tmp/reefnode \
-  --port 30333 \
-  --ws-port 9944 \
-  --rpc-port 9933 \
-  --rpc-methods Auto \
-  --rpc-cors all \
-  --rpc-external \
-  --ws-external \
-  --name MyNode
-```
-
-### Reset the local chain
-To prune (reset) the node run:
-```
-./target/release/reef-node purge-chain --chain dev
-```
-
-### Generate a keypair
-You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) guide on how to use the CLI to make new keypairs.
-
-
 ## Help
 You can ask technical questions in our matrix.org developer [chat](https://app.element.io/#/room/#reef:matrix.org) room `#reef:matrix.org`.
