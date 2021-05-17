@@ -13,7 +13,7 @@ weight: 210
 toc: true
 ---
 
-## Reef Chain
+## Reef Tooling
 
 ### Developer Console
 You can connect to the developer UI for different networks:
@@ -59,10 +59,18 @@ Compiling, deploying and managing Solidity smart contracts by hand can be a chor
 we have developer frameworks for Python and JS/TypeScript.
 
 ### Reef for JS/TypeScript devs
-Javascript developers can use our [HardHat integration](https://github.com/reef-defi/hardhat-reef) to develop and deploy smart contracts on Reef chain.
+Javascript developers can use [Reef Hardhat](https://github.com/reef-defi/hardhat-reef) to develop, deploy and test smart contracts on Reef chain.
+
+For low-level interaction with contracts deployed on Reef chain use [reef-evm.js](https://github.com/reef-defi/reef-evm.js), and for interaction with Reef chain itself use [reef.js](https://github.com/reef-defi/reef.js).
 
 ### Reef for Python devs
 Reef ecosystem for Python is coming soon.
+
+## Examples
+Here are a few example applications that can be used as Reef chain integration reference:
+- [Reefswap](https://github.com/reef-defi/reefswap) for integration with Reef Hardhat
+- [Reefswap UI]() for integration with Polkadot.js browser extension
+- [Reefscan](https://github.com/reef-defi/reef-explorer) and [Remix Reef Plugin](https://github.com/reef-defi/reef-remix-plugin) for Reef chain integration
 
 
 ## Help

@@ -27,7 +27,7 @@ make build && cd target/release
 ### Generate a keypair
 You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) guide on how to use the CLI to make new keypairs.
 
-## Start the development node
+## Start a development node
 ```
 ./reef-node \
   --chain dev \
