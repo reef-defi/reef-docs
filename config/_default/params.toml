@@ -36,7 +36,7 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "<a href=\"https://reefscan.com\">Reefscan</a> - <a href=\"https://remix.reefscan.com\">Remix</a> - <a href=\"https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.reefscan.com%2Fws#/explorer\">Console</a> "
+footer = "<a href=\"https://reefscan.com\">Reefscan</a> - <a href=\"https://remix.reefscan.com\">Remix</a> - <a href=\"https://console.reefscan.com\">Console</a> "
 
 # Alert
 alert = false

@@ -18,15 +18,9 @@ toc: true
 ### Developer Console
 You can connect to the developer UI for different networks:
 
-[Mainnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.reefscan.com%2Fws#/explorer) | [Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer) | [Local Node](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer)
-
+[Mainnet](https://console.reefscan.com/?rpc=wss%3A%2F%2Frpc.reefscan.com%2Fws#/explorer) | [Testnet](https://console.reefscan.com/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer)
 
 {{< alert icon="💡" text="If you are opening the developer console for the first time you will need to setup Types and Metadata." >}}
-
-
-The `types.json` file for the block explorer UI can be found [here](https://github.com/reef-defi/reef-chain/blob/master/assets/types.json).
-
-To set the types.json go to Developer > Settings. [example](https://i.imgur.com/ShfG9v7.png)
 
 The metadata syncing with the [Polkadot browser extension](https://polkadot.js.org/extension/) will be offered to you automatically. Just click accept.
 
