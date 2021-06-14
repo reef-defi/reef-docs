@@ -20,8 +20,6 @@ You can connect to the developer UI for different networks:
 
 [Mainnet](https://console.reefscan.com/?rpc=wss%3A%2F%2Frpc.reefscan.com%2Fws#/explorer) | [Testnet](https://console.reefscan.com/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer)
 
-{{< alert icon="💡" text="If you are opening the developer console for the first time you will need to setup Types and Metadata." >}}
-
 The metadata syncing with the [Polkadot browser extension](https://polkadot.js.org/extension/) will be offered to you automatically. Just click accept.
 
 ### Block explorer
@@ -52,19 +50,17 @@ Here are some great resources for learning Solidity:
 Compiling, deploying and managing Solidity smart contracts by hand can be a chore. For this reason
 we have developer frameworks for Python and JS/TypeScript.
 
-### Reef for JS/TypeScript devs
-Javascript developers can use [Reef Hardhat](https://github.com/reef-defi/hardhat-reef) to develop, deploy and test smart contracts on Reef chain.
 
-For low-level interaction with contracts deployed on Reef chain use [reef-evm.js](https://github.com/reef-defi/evm-provider.js), and for interaction with Reef chain itself use [reef.js](https://github.com/reef-defi/reef.js).
+### Reef for JS/TypeScript devs
+We provide multiple libraries to interact with the Reef chain. [reef.js](https://github.com/reef-defi/reef.js) can be used for both Substrate as well as EVM module interaction. An [evm-provider.js](https://github.com/reef-defi/evm-provider.js/commits/master) wrapper around the reef.js strives to make the EVM module interaction easier - it is compatible with the ethers.js library. The [hardhat-reef](https://github.com/reef-defi/hardhat-reef) plugin goes a step further and allows to be used in the Hardhat framework - you can easily compile/deploy/interact with the contracts in a single project.
+
+
+See [the corresponding page](/docs/developers/js_libraries) describing JS libraries in detail.
+
+
 
 ### Reef for Python devs
 Reef ecosystem for Python is coming soon.
-
-## Examples
-Here are a few example applications that can be used as Reef chain integration reference:
-- [Reefswap](https://github.com/reef-defi/reefswap) for integration with Reef Hardhat
-- [Reefswap UI]() for integration with Polkadot.js browser extension
-- [Reefscan](https://github.com/reef-defi/reef-explorer) and [Remix Reef Plugin](https://github.com/reef-defi/reef-remix-plugin) for Reef chain integration
 
 
 ## Help

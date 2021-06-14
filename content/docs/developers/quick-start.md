@@ -215,4 +215,4 @@ verify it on Reefscan, so that other developers can access its source code and A
 Verify your deployed contract on: [Mainnet](https://reefscan.com/verifyContract) or [Testnet](https://testnet.reefscan.com/verifyContract)
 
 ### Build a UI
-TODO
+One example of UI interacting with the Reef chain can be seen [here](https://github.com/reef-defi/evm-canvas-ui).It is built on top of Polkadot.js apps and uses `evm-provider.js` library to deploy and interact with the contracts.
