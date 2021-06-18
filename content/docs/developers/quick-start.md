@@ -214,5 +214,12 @@ verify it on Reefscan, so that other developers can access its source code and A
 
 Verify your deployed contract on: [Mainnet](https://reefscan.com/verifyContract) or [Testnet](https://testnet.reefscan.com/verifyContract)
 
-### Build a UI
-One example of UI interacting with the Reef chain can be seen [here](https://github.com/reef-defi/evm-canvas-ui).It is built on top of Polkadot.js apps and uses `evm-provider.js` library to deploy and interact with the contracts.
+### Build an UI
+To start building an UI for your DApp, check the [UI examples repository](https://github.com/reef-defi/ui-examples). It provides components as well as [a single file React example](https://github.com/reef-defi/ui-examples/blob/master/packages/example-react/src/index.tsx), which contains most of the functionality you need to setup a DApp:
+  - Polkadot.js extension connection
+  - listing accounts in Polkadot.js extension
+  - interacting with EVM contracts on the Reef Chain
+  - generating Substrate addresses
+
+
+[evm-canvas-ui](https://github.com/reef-defi/evm-canvas-ui) is a more sophisticated UI interacting with the Reef chain. It is built on top of Polkadot.js apps and uses `evm-provider.js` library to deploy and interact with the contracts.
