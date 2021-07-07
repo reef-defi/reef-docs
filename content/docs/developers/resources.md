@@ -60,7 +60,7 @@ See [the corresponding page](/docs/developers/js_libraries) describing JS librar
 
 
 ### Reef for Python devs
-Reef ecosystem for Python is coming soon.
+Developers can use our [Python library](https://pypi.org/project/reef-interface/) to interact with Reef chain.
 
 
 ## Help
