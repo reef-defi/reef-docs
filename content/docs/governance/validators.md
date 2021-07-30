@@ -118,3 +118,8 @@ The last step is to signal that we want to become a validator. This is done by c
 
 Congratulations, you are now a candidate validator. To become elected as a Validator you will need to get Nominator's support and win the elections. Good luck!
 
+### Identity
+To make yourself identifiable to the Reef community you can set on-chain identity for your address. The identity consists of display name, as well as socials (website, twitter, etc).
+
+The easiest way to set the idenitity is via the [console](https://console.reefscan.com/#/accounts).
+
