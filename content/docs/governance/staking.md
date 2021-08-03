@@ -1,7 +1,7 @@
 ---
-title: "Staking/Bonding"
+title: "Staking"
 description: "Staking on Reef chain"
-lead: "Stake on Reef chain and pick validators."
+lead: "Stake on Reef chain and vote for validators."
 date: 2020-08-03T15:21:01+02:00
 lastmod: 2020-08-03T15:21:01+02:00
 draft: false
@@ -9,9 +9,12 @@ images: []
 menu:
   docs:
     parent: "governance"
-weight: 340
+weight: 310
 toc: true
 ---
+
+*This tutorial focuses on principles of staking and nominating. The technical guide for nominators is
+available [here](/docs/governance/nominators/).*
 
 ## Nominator
 

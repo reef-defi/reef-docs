@@ -9,7 +9,7 @@ images: []
 menu:
   docs:
     parent: "governance"
-weight: 310
+weight: 300
 toc: true
 ---
 
