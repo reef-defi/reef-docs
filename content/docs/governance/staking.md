@@ -21,7 +21,7 @@ You may have an account with REEF and want to earn fresh REEF. You could do so a
 
 By doing so, you become a nominator for the validator(s) of your choice. Pick your validators carefully - if they do not behave properly, they will get slashed and you will lose REEF as well. However, if they do follow the rules of the network, then you can share in staking rewards that they generate.
 
-While your REEF are staked by nominating a validator, they are 'locked' (bonded). You can receive new REEF in your account but you cannot stake as a validator or transfer REEF away from your account. You can [un-nominate at any time](https://wiki.polkadot.network/docs/maintain-guides-how-to-unbond) to stop staking your funds. Keep in mind that the un-nomination is effective in the next era, and that un-nominating does not automatically unbond your funds. There is an unbonding period of 28 days on Reef before bonded funds can be transferred after issuing an unbond transaction.
+While your REEF are staked by nominating a validator, they are 'locked' (bonded). You can receive new REEF in your account but you cannot stake as a validator or transfer REEF away from your account. You can un-nominate at any time to stop staking your funds. Keep in mind that the un-nomination is effective in the next era, and that un-nominating does not automatically unbond your funds. There is an unbonding period of 28 days on Reef before bonded funds can be transferred after issuing an unbond transaction.
 
 
 ### Active vs. Inactive Nomination
@@ -37,7 +37,7 @@ When you go to the [Account actions](https://console.reefscan.com/#/staking/acti
 
 Suppose you have nominated five validator candidates, and three out of five were elected to the active validator set, then you should see two of your nominations as "waiting", and most likely one as "active" and the rest as "inactive". Active or inactive nomination means your nominated validators have been elected to be in the validator set, whereas waiting means they did not get elected. Generally, you will only have a single validator have an active nomination, which means that you are directly supporting it with your stake in this era and thus potentially receiving staking rewards. Inactive nominators were validators that were elected for this era but which you are not actively supporting. Every era, a new election will take place and you may be assigned a different active nomination from among the validators you have selected.
 
-If you are committing a very large amount of stake, then you may have more than one active nomination. However, the election algorithm attempts to minimize this situation, and it should not occur often, so you should almost always see only a single active nomination per era. See the [section on Phragmén optimization](https://wiki.polkadot.network/docs/learn-phragmen#optimizations) for more details.
+If you are committing a very large amount of stake, then you may have more than one active nomination. However, the election algorithm attempts to minimize this situation, and it should not occur often, so you should almost always see only a single active nomination per era. The method is called Phragmén optimization.
 
 
 ### Oversubscribed Validators
@@ -81,7 +81,7 @@ On the Targets page, you can filter out validators that have traits that may ind
 
 * Single from operator - Do not show groups of validators run by a single operator.
 * No 20%+ comm - Do not show any validators with a commission of 20% or higher.
-* No at capacity - Do not show any validators who are currently operating [at capacity](https://wiki.polkadot.network/docs/glossary#capacity) (i.e., could potentially be oversubscribed).
+* No at capacity - Do not show any validators who are currently operating at capacity (i.e., could potentially be oversubscribed).
 * Recent payouts - Only show validators that have recently caused a payout to be issued. Note that anyone can cause a payout to occur; it does not have to be the operator of a validator.
 * Only elected - Only show validators that are currently in the active set (i.e., they have been elected to produce blocks this era).
 * Only with an identity - Only show validators that have set an identity. Note that this identity does not have to be verified by a registrar for the validator to show up in the list.
@@ -109,6 +109,6 @@ Recall that slashing is an additive function; the more validators that are offli
 
 ### Avoiding Oversubscribed Validators
 
-If you are not nominating with a large number of REEF, you should try to avoid [oversubscribed](https://wiki.polkadot.network/docs/glossary#oversubscribed) validators. It is not always easy to calculate if the validator selected will be oversubscribed in the next session; one way to avoid choosing potentially oversubscribed validators is to filter out any that are [at capacity](https://wiki.polkadot.network/docs/glossary#capacity) on the [Targets page](https://console.reefscan.com/#/staking/targets).
+If you are not nominating with a large number of REEF, you should try to avoid oversubscribed validators. It is not always easy to calculate if the validator selected will be oversubscribed in the next session; one way to avoid choosing potentially oversubscribed validators is to filter out any that are at capacity on the [Targets page](https://console.reefscan.com/#/staking/targets).
 
 Finally, if you have a very small amount of REEF, you may not be able to have your nomination fit into the election set. The nominator to validator mapping has to fit in a single block, and if there are too many nominators, the lowest-staked nominations will be dropped. This value is obviously dynamic and will vary over time. If you review the lowest amount of nominations that are occurring on current validators, you can get a good idea of how many REEF will likely be necessary to have your nomination earn you rewards.
