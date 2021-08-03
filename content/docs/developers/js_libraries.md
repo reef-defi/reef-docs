@@ -302,7 +302,8 @@ Javascript developers can use [Reef Hardhat plugin](https://github.com/reef-defi
 
 ## Examples
 Here are a few example applications that can be used as a Reef chain integration reference:
-- [Reefswap](https://github.com/reef-defi/reefswap) for integration with Reef Hardhat (`scripts` directory) and integration with `evm-provider.js` (`src` directory)
-- [Hardhat Reef Examples](https://github.com/reef-defi/hardhat-reef-examples) for examples of integration with the Reef Hardhat plugin
-- [EVM Playground](https://github.com/reef-defi/evm-canvas-ui) for integration with Polkadot.js browser extension
-- [Reefscan](https://github.com/reef-defi/reef-explorer) and [Remix Reef Plugin](https://github.com/reef-defi/reef-remix-plugin) for Reef chain integration
+- [Reefswap](https://github.com/reef-defi/reefswap) for integration with Reef Hardhat (`scripts` directory) and integration with the `evm-provider.js` (`src` directory).
+- [Hardhat Reef Examples](https://github.com/reef-defi/hardhat-reef-examples) for examples of integration with the Reef Hardhat plugin.
+- [UI examples](https://github.com/reef-defi/ui-examples) for integration with Polkadot.js browser extension and EVM contract interaction.
+- [EVM Playground](https://github.com/reef-defi/evm-canvas-ui) a more sophisticated example of integration with Polkadot.js browser extension and EVM contract interaction.
+- [Reefscan](https://github.com/reef-defi/reef-explorer) and [Remix Reef Plugin](https://github.com/reef-defi/reef-remix-plugin) for Reef chain integration.
