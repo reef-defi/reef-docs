@@ -123,3 +123,11 @@ To make yourself identifiable to the Reef community you can set on-chain identit
 
 The easiest way to set the idenitity is via the [console](https://console.reefscan.com/#/accounts).
 
+After you've set the on-chain idenity, call `identity.requestJudgement()` with the fee of 100 REEF.
+The identities are verified by the "[REEF ECOSYSTEM](https://reefscan.com/account/5CfqnipK6v9zz3zGC8joQE1hSuxczLaFcNtBhDcKWVw2W1a8)" registrar.
+To complete the "KYC" and get your identitiy approved by the registrar, please write into the `#reef:matrix.org` [group](https://app.element.io/#/room/#reef:matrix.org).
+
+*Note: "REEF ECOSYSTEM" registrar is only available for current and prospecting validators, as well
+as established projects deploying on Reef chain. The registrar is not available for verifying
+regular accounts for "KYC" purposes.*
+
