@@ -24,6 +24,11 @@ spec file, since the WASM builds are not deterministic. Just do `--chain chain-s
 
 [>> Docs](/docs/developers/nodes/#start-a-rpc-node)
 
+### Error: Service(Keystore(Io(Os { code: 13, kind: PermissionDenied, message: "Permission denied" })))
+Make sure `--base-path` is set to a folder you have appropriate permissions for. Either update the
+permissions of your account to access `/reef/validator` (documentation default) or change
+`--base-path` to somewhere else (ie. your home folder).
+
 ### Weird database errors
 Whenever you run into some sort of database error, `purge-cache` subcommand is your friend.
 You can do a fresh sync after the purge, and things should just work.
