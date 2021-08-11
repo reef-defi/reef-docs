@@ -62,6 +62,8 @@ See [the corresponding page](/docs/developers/js_libraries) describing JS librar
 ### Reef for Python devs
 Developers can use our [Python library](https://pypi.org/project/reef-interface/) to interact with Reef chain.
 
+[Getting Started](https://github.com/reef-defi/py-reef-interface#readme) | [Documentation](https://reef-defi.github.io/py-reef-interface/reefinterface/index.html)
+
 
 ## Help
 You can ask technical questions in our matrix.org developer [chat](https://app.element.io/#/room/#reef:matrix.org) room `#reef:matrix.org`.
