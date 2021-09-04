@@ -19,10 +19,12 @@ You are missing the [types.json](https://github.com/reef-defi/reef-chain/blob/ma
 [>> Docs](/docs/developers/resources/#developer-console)
 
 ### Bootnode with peer id ... is on a different chain (our genesis: 0x... theirs: 0x...)
-If you compiled the `reef-node` binary yourself you will have to initialize the chain with the chain
-spec file, since the WASM builds are not deterministic. Just do `--chain chain-spec.json`.
+If you compiled the `reef-node` binary older than v3.0.1 then you will have to initialize the chain with the chain
+spec file, since the WASM builds are not deterministic. Just do `--chain chain_spec_mainnet_raw.json`.
 
-[>> Docs](/docs/developers/nodes/#start-a-rpc-node)
+The new Reef node has genesis bytecode embedded and no longer needs manual imports of the chain spec file.
+
+[>> Chain spec download](https://github.com/reef-defi/reef-chain/tree/master/assets)
 
 ### Error: Service(Keystore(Io(Os { code: 13, kind: PermissionDenied, message: "Permission denied" })))
 Make sure `--base-path` is set to a folder you have appropriate permissions for. Either update the

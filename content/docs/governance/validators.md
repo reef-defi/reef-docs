@@ -29,26 +29,26 @@ Validators's core responsibility is reliable block production. However in practi
 This guide only covers setting up the validator node, however there is a lot more to being a validator than running a node.
 
 ### Start the validator node
-Here is the sample command for spinning up a `--validator` node on `testnet`.
+Here is the sample command for spinning up a `--validator` node on Reef mainnet.
 
 ```bash
 ./reef-node \
-  --chain testnet \
   --validator \
+  --chain mainnet \
   --base-path /reef/validator \
+  --execution=wasm \
   --port 30333 \
   --ws-port 9944 \
   --rpc-port 9933 \
   --rpc-methods Unsafe \
   --no-mdns \
   --no-private-ipv4 \
+  --no-prometheus \
   --no-telemetry \
   --name MyValidatorNode
 ```
 
-If you have compiled your own binary, you need to pass the appropriate [chain spec file](https://github.com/reef-defi/reef-chain/tree/master/assets), ie: `--chain chain_spec_testnet.json`/`--chain chain_spec_mainnet.json` instead of `--chain testnet`/`--chain mainnet`.
-
-Note the `--rpc-methods Unsafe` flag. This flag is necessary to enable key management endpoints. Do not expose these endpoints to the public internet. You are solely responsible for adequate operational security.
+Note the `--rpc-methods Unsafe` flag. This flag is necessary to enable key management endpoints for validator setup, however it should be omitted once the validator is configured (see systemd snippet below). Do not expose wallet rpc endpoints to the public internet. You are solely responsible for adequate operational security.
 
 ### Setup the session keys
 {{< alert icon="🔥" text="Make sure to only execute the `author_*` commands against a secure RPC node that you own. Failure to do so may result in loss of funds." >}}
@@ -103,6 +103,22 @@ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d \
 
 {{< alert icon="⚠️" text="The validator node will need to be restarted after setting or changing GRANDPA keys." >}}
 
+### Optional: Systemd service
+To automatically start Reef node on boot, you can create a systemd service from the following template:
+```
+[Unit]
+Description=Reef Validator
+
+[Service]
+ExecStart=/bin/reef-node --base-path /reef/validator --validator --chain mainnet --execution=wasm --port 30333 --no-private-ipv4 --no-mdns --no-prometheus --no-telemetry --name MyValidatorNode
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Make sure to configure the `--base-path` and the sentry nodes if you have them (recommended).
 
 ### Bonding
 This step is the same as when [bonding](/docs/governance/nominators/#bonding) as Nominators.

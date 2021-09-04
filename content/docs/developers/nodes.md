@@ -20,9 +20,22 @@ Here is a quick cheat-sheet with some of the most commonly used commands on the 
 
 ### Compile the node
 If you haven't yet, compile the Reef node locally:
+
+Use `git tag` to list all available release builds:
+```bash
+git tag
 ```
-make build && cd target/release
+
+To create a corresponding production build, first checkout the tag:
+```bash
+git checkout mainnet-1
 ```
+
+Then run this command to install appropriate compiler version and produce a binary:
+```bash
+make release
+```
+
 
 ### Generate a keypair
 You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) guide on how to use the CLI to make new keypairs.
@@ -48,42 +61,6 @@ If you have downloaded the official binary for Ubuntu 20.04 from [GitHub Release
 ```
 ./reef-node \
   --chain mainnet \
-  --base-path /reef/fullnode \
-  --pruning=archive \
-  --port 30333 \
-  --ws-port 9944 \
-  --rpc-port 9933 \
-  --rpc-methods Auto \
-  --rpc-cors all \
-  --rpc-external \
-  --ws-external \
-  --name MyRPCNode
-```
-
-**If the binary is not available for your platform, you can compile it yourself:**
-
-Use `git tag` to list all available release builds:
-```bash
-git tag
-```
-
-To create a corresponding production build, first checkout the tag:
-```bash
-git checkout mainnet-1
-```
-
-Then run this command to install appropriate compiler version and produce a binary:
-```bash
-make release
-```
-
-The last thing we need is the `chain_spec.json` file. Compiling WASM is not deterministic, yet
-we want to have matching genesis. The `chain_spec.json` file can be downloaded from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases) as well.
-
-Now we can start our node like so:
-```
-./reef-node \
-  --chain chain_spec_mainnet.json \
   --base-path /reef/fullnode \
   --pruning=archive \
   --port 30333 \
