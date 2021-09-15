@@ -36,11 +36,8 @@ Then run this command to install appropriate compiler version and produce a bina
 make release
 ```
 
-
-### Generate a keypair
-You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) guide on how to use the CLI to make new keypairs.
-
 ## Start a development node
+The development node will create a temporary, local chain.
 ```
 ./reef-node \
   --chain dev \
@@ -57,7 +54,7 @@ You can follow the [accounts](/docs/developers/accounts/#generate-a-keypair) gui
 
 
 ## Start a RPC node
-If you have downloaded the official binary for Ubuntu 20.04 from [GitHub Releases](https://github.com/reef-defi/reef-chain/releases), you can run it like so:
+The Reef chain mainnet or testnet RPC node can be started like so:
 ```
 ./reef-node \
   --chain mainnet \
@@ -74,6 +71,8 @@ If you have downloaded the official binary for Ubuntu 20.04 from [GitHub Release
 ```
 
 To make the node archival (for use with indexers or block explorers) we use the `--pruning=archive` flag. Omit this flag to run the _light_ RPC node.
+
+Additionally, you may want to configure nginx frontend with TLS. See an [example](https://github.com/reef-defi/reef-chain/blob/master/rpc/nginx.conf).
 
 
 ## Start a bootnode
