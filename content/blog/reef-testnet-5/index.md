@@ -7,7 +7,7 @@ lastmod: 2021-05-15T19:51:15+02:00
 draft: false
 weight: 50
 images: []
-contributors: []
+contributors: ["Reef Developers"]
 ---
 
 The main focus of this release is extensive testing and deployment of EVM applications on top of Reef chain. With this release we are also inviting new validators to start their node and participate in NPoS elections.

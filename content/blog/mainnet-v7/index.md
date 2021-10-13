@@ -7,10 +7,10 @@ lastmod: 2021-10-13T07:45:48+02:00
 draft: false
 weight: 50
 images: []
-contributors: []
+contributors: ["Reef Developers"]
 ---
 
-Reef v7 has been activated on mainnet on block [1,242,424](https://reefscan.com/block/?blockNumber=1242424).
+Reef v7 has been activated on mainnet on block [1242424](https://reefscan.com/block/?blockNumber=1242424).
 
 This mainnet upgrade features multiple bugfixes. The Reef node v3.0.1 also makes it easier to start
 rpc/boot/validator nodes thanks to embedded wasm genesis runtimes.
@@ -18,10 +18,10 @@ rpc/boot/validator nodes thanks to embedded wasm genesis runtimes.
 The node upgrade is optional, but recommended.
 
 ## Ecosystem improvements
-Developers should upgrade to the latest versions of our [Javascript](https://docs.reef.finance/docs/developers/js_libraries/) and [Python](https://github.com/reef-defi/py-reef-interface#readme) libraries.
+Developers should upgrade to the latest versions of our [JavaScript](https://docs.reef.finance/docs/developers/js_libraries/) and [Python](https://github.com/reef-defi/py-reef-interface#readme) libraries.
 
 ## Remix ERC-20 Support
-[Reef Remix](https://remix.reefscan.com) makes it very easy to deploy new tokens. The smart contract deployment and verification
+[Reef Remix](https://remix.reefscan.com) makes it easy to deploy new tokens. The smart contract deployment and verification
 is now fully automated. All you need to do is pick the token name and supply.
 
 ![](remix.png)

@@ -7,7 +7,7 @@ lastmod: 2021-04-12T19:51:15+02:00
 draft: false
 weight: 50
 images: []
-contributors: []
+contributors: ["Reef Developers"]
 ---
 
 This release contains multiple breaking changes, however the EVM implementation is now considered stable.

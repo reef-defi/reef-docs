@@ -7,7 +7,7 @@ lastmod: 2021-05-28T07:45:48+02:00
 draft: false
 weight: 50
 images: []
-contributors: []
+contributors: ["Reef Developers"]
 ---
 
 The Reef mainnet is launching in “canary” mode. Reef chain is not just an Ethereum clone - is built from ground up with new blockchain technology, and as such carries risk of potentially disruptive bugs.

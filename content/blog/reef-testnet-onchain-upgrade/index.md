@@ -7,7 +7,7 @@ lastmod: 2021-04-07T19:02:29+02:00
 draft: false
 weight: 50
 images: []
-contributors: []
+contributors: ["Reef Developers"]
 ---
 
 At block [29,510](https://reefscan.com/block/?blockNumber=29510) the Reef Testnet 2 got its first on-chain upgrade.
