@@ -15,26 +15,27 @@ toc: true
 
 
 ## Reef mainnet
-**The Reef mainnet is launching in "canary" mode.** Reef chain is not just an Ethereum clone - is built from ground up with new blockchain
-technology, and as such carries risk of potentially disruptive bugs.
+**The Reef mainnet went live on May 28th 2021.**
 
-While Reef chain is in "canary" mode, the chain might have to be reset in the event of catastrophic failure,
-and only REEF account balances at the time of the failure would carry over to the new network.
+Reef mainnet is now considered stable, and can be used for deployment of live smart contracts.
+
+
 
 ### Mainnet info sheet
 
 ```
-| Key                 | Value                               |
-| ------------------- | ----------------------------------- |
-| Currency, Precision | REEF, 18                            |
-| EVM chain id        | 13939                               |
-| SS58 Format         | 42                                  |
-| Block authoring     | BABE                                |
-| Finality            | GRANDPA                             |
-| Block Time          | 10s                                 |
-| Block Size          | 1.25MB to 3.75MB                    |
-| HTTP RPC            | https://rpc.reefscan.com            |
-| Websocket           | wss://rpc.reefscan.com/ws           |
+| Key             | Value                                      |
+| --------------- | ------------------------------------------ |
+| Name, Precision | REEF, 18                                   |
+| SS58 Format     | 42                                         |
+| EVM chain id    | 13939                                      |
+| REEF ERC-20     | 0x0000000000000000000000000000000001000000 |
+| Block authoring | BABE                                       |
+| Finality        | GRANDPA                                    |
+| Block Time      | 10s                                        |
+| Block Size      | 1.25MB to 3.75MB                           |
+| HTTP RPC        | https://rpc.reefscan.com                   |
+| Websocket       | wss://rpc.reefscan.com/ws                  |
 ```
 
 ## Reef testnet
@@ -46,16 +47,17 @@ recommended to first deploy apps on the testnet before launching on mainnet.
 ### Testnet info sheet
 
 ```
-| Key                 | Value                               |
-| ------------------- | ----------------------------------- |
-| Currency, Precision | REEF, 18                            |
-| EVM chain id        | 13939                               |
-| SS58 Format         | 42                                  |
-| Block authoring     | BABE                                |
-| Finality            | GRANDPA                             |
-| Block Time          | 10s                                 |
-| Block Size          | 1.25MB to 3.75MB                    |
-| HTTP RPC            | https://rpc-testnet.reefscan.com    |
-| Websocket           | wss://rpc-testnet.reefscan.com/ws   |
+| Key             | Value                                      |
+| --------------- | ------------------------------------------ |
+| Name, Precision | REEF, 18                                   |
+| SS58 Format     | 42                                         |
+| EVM chain id    | 13939                                      |
+| REEF ERC-20     | 0x0000000000000000000000000000000001000000 |
+| Block authoring | BABE                                       |
+| Finality        | GRANDPA                                    |
+| Block Time      | 10s                                        |
+| Block Size      | 1.25MB to 3.75MB                           |
+| HTTP RPC        | https://rpc-testnet.reefscan.com           |
+| Websocket       | wss://rpc-testnet.reefscan.com/ws          |
 ```
 
