@@ -13,32 +13,70 @@ weight: 220
 toc: true
 ---
 
-## Reef node
-Here is a quick cheat-sheet with some of the most commonly used commands on the Reef node.
-
 {{< alert icon="💡" text="To see all commands and their documentation run <b>./reef-node help</b>" >}}
 
-### Compile the node
-If you haven't yet, compile the Reef node locally:
+### Requirements
 
-Use `git tag` to list all available release builds:
+Reef chain is written in [Rust](https://www.rust-lang.org/). A basic familiarity with Rust tooling is required.
+
+
+### Clone the repo
+{{< btn-copy text="git clone --recursive https://github.com/reef-defi/reef-chain" >}}
 ```bash
-git tag
+git clone --recursive https://github.com/reef-defi/reef-chain
 ```
 
-To create a corresponding production build, first checkout the tag:
+### Install Rust
+If you don't have [Rust](https://www.rust-lang.org/tools/install) already, you can install it with:
+{{< btn-copy text="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh" >}}
 ```bash
-git checkout mainnet-1
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Then run this command to install appropriate compiler version and produce a binary:
+You can install the development compiler and the toolchain with:
+{{< btn-copy text="make init" >}}
 ```bash
-make release
+make init
 ```
 
-## Start a development node
-The development node will create a temporary, local chain.
+### Start a local development node
+
+{{< alert icon="💡" text="If you are only interested in using Reef chain (ie. to deploy your dapps), consider running the RPC node instead." >}}
+
+The `make run` command will launch a temporary node and its state will be discarded after you terminate the process.
+
+To run the temporary (development) node run:
+{{< btn-copy text="make run" >}}
+```bash
+make run
 ```
+
+You should see an output like [this](https://i.imgur.com/Dst10UI.png) when the Reef chain starts producing blocks.
+
+
+Use the following command to build the node without launching it:
+
+```bash
+make build
+```
+
+This command will start the single-node development chain:
+
+```bash
+cd target/release
+./reef-node --dev
+```
+
+Purge the development chain's state:
+
+```bash
+./reef-node purge-chain --dev
+```
+
+
+### Configure your local development node
+Here are some of the common arguments you can use for a local node:
+```bash
 ./reef-node \
   --chain dev \
   --base-path /tmp/reefnode \
@@ -51,6 +89,8 @@ The development node will create a temporary, local chain.
   --ws-external \
   --name MyDevNode
 ```
+
+
 
 
 ## Start a RPC node
@@ -114,6 +154,9 @@ This node can now be directly connected to via from another node via `--bootnode
 
 {{< alert icon="💡" text="You can also point a domain name to your node's ip and then reference it as /dns/bootnode.mydomain.com/tcp/30333/..." >}}
 
+## Start a validator node
+Please check our [validator](/docs/governance/validators/) guide on how to setup and configure a
+validator node.
 
 ## Reset the chain state
 To prune (reset) the node run:

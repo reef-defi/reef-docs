@@ -13,7 +13,12 @@ weight: 210
 toc: true
 ---
 
-## Reef Tooling
+## Reef Apps
+Reef comes with multiple open-source apps that are ready to use:
+ - [Reefswap](https://reefswap.com) is a Uniswap V2 based DEX for Reef ([source](https://github.com/reef-defi/reefswap-ui))
+ - [Reefscan](https://reefscan.com) is a block explorer for Reef ([source](https://github.com/reef-defi/reef-explorer))
+
+## Reef Developer Ecosystem
 
 ### Developer Console
 You can connect to the developer UI for different networks:
@@ -36,20 +41,7 @@ You can deploy and interact with smart contracts via EVM Playground UI:
 [https://evm.reefscan.com](https://evm.reefscan.com)
 
 
-## DeFi
-
-### Learn Solidity
-Solidity is a programming language for writing DeFi applications. The Solidity programs are compiled
-and uploaded to Reef chain, where they run in a completely decentralized fashion.
-
-Here are some great resources for learning Solidity:
- - The [official Solidity docs](https://docs.soliditylang.org)
- - Solidity [tutorial](https://www.tutorialspoint.com/solidity/index.htm) for programmers
-
-
-Compiling, deploying and managing Solidity smart contracts by hand can be a chore. For this reason
-we have developer frameworks for Python and JS/TypeScript.
-
+## Developer SDKs
 
 ### Reef for JS/TypeScript devs
 We provide multiple libraries to interact with the Reef chain. [reef.js](https://github.com/reef-defi/reef.js) can be used for both Substrate as well as EVM module interaction. An [evm-provider.js](https://github.com/reef-defi/evm-provider.js/commits/master) wrapper around the reef.js strives to make the EVM module interaction easier - it is compatible with the ethers.js library. The [hardhat-reef](https://github.com/reef-defi/hardhat-reef) plugin goes a step further and allows to be used in the Hardhat framework - you can easily compile/deploy/interact with the contracts in a single project.

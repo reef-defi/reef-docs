@@ -13,80 +13,32 @@ weight: 200
 toc: true
 ---
 
-In this guide we will deploy a simple Flipper smart contract onto Reef chain.
-
-The guide is broken into 3 parts:
- - setting up the Reef development node
- - setting up the smart contract development environment
- - deploying and running your first smart contract
+In this guide we will deploy a simple smart contract onto Reef chain.
 
 
-## Setting up a development node
+### (Optional) Setting up a development node
 
-### Requirements
+To set up your local development or RPC node, check out the [Reef node guide](/docs/developers/nodes/).
 
-Reef chain is written in [Rust](https://www.rust-lang.org/). A basic familiarity with Rust tooling is required.
+Alternatively, you can skip this and just use the public RPC's (either [directly](/docs/developers/networks/)) or through our [Javascript](/docs/developers/js_libraries/) and [Python](https://github.com/reef-defi/py-reef-interface#readme) libraries.
 
+## New to Solidity?
+Solidity is a programming language for writing DeFi applications. The Solidity programs are compiled
+and uploaded to Reef chain, where they run in a completely decentralized fashion.
 
-### Clone the repo
-{{< btn-copy text="git clone --recursive https://github.com/reef-defi/reef-chain" >}}
-```bash
-git clone --recursive https://github.com/reef-defi/reef-chain
-```
-
-### Install Rust
-If you don't have [Rust](https://www.rust-lang.org/tools/install) already, you can install it with:
-{{< btn-copy text="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh" >}}
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
-You can install the development compiler and the toolchain with:
-{{< btn-copy text="make init" >}}
-```bash
-make init
-```
-
-### Start a development node
-
-The `make run` command will launch a temporary node and its state will be discarded after you terminate the process.
-
-To run the temporary (development) node run:
-{{< btn-copy text="make run" >}}
-```bash
-make run
-```
-
-You should see an output like [this](https://i.imgur.com/Dst10UI.png) when the Reef chain starts producing blocks.
+Here are some great resources for learning Solidity:
+ - The [official Solidity docs](https://docs.soliditylang.org)
+ - Solidity [tutorial](https://www.tutorialspoint.com/solidity/index.htm) for programmers
 
 
+Compiling, deploying and managing Solidity smart contracts by hand can be a chore. For this reason
+we have developer frameworks for Python and JS/TypeScript.
 
-### (Optional) Run a persistent single-node chain
-
-Use the following command to build the node without launching it:
-
-```bash
-make build
-```
-
-This command will start the single-node development chain with persistent state:
-
-```bash
-./target/release/reef-node --dev
-```
-
-Purge the development chain's state:
-
-```bash
-./target/release/reef-node purge-chain --dev
-```
-
-
-## Smart Contracts
+## Smart Contracts on Reef vs Ethereum
 
 {{< alert icon="💡" text="Reef chain is NOT based on Ethereum. It is based on newer and improved blockchain architecture provided by Polkadot Substrate. The only thing in common with Ethereum is the EVM, which means that all Ethereum smart contracts will also work on Reef Chain. However, many tools from Ethereum such as Metamask and web3 are NOT compatible. Fortunately we have drop-in replacements." >}}
 
-The Reef chain smart contracts are written in [Solidity](https://docs.soliditylang.org/en/v0.8.2/).
+The Reef chain smart contracts are written in [Solidity](https://docs.soliditylang.org/en/latest/).
 Any existing Ethereum smart contracts written in Solidity 0.6 or greater will work on Reef chain
 without a need for modifications.
 
