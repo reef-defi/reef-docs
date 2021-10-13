@@ -1,8 +1,11 @@
 ---
-title: "Blog"
+title: "Developer Blog"
 description: "The Reef Blog."
 date: 2020-10-06T08:49:55+00:00
 lastmod: 2020-10-06T08:49:55+00:00
 draft: false
 images: []
 ---
+
+Featuring Reef chain releases and ecosystem improvements.
+
