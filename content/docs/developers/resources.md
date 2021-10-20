@@ -20,26 +20,28 @@ Reef comes with multiple open-source apps that are ready to use:
 
 ## Reef Developer Ecosystem
 
+### Block explorer
+Reefscan is the main block explorer for Reef chain. It also supports full interaction with EVM smart
+contracts.
+
+[> https://reefscan.com](https://reefscan.com)
+
+### Remix IDE
+Developers can use Remix IDE for Reef chain to quickly deploy and test their smart contracts.
+
+[> https://remix.reefscan.com](https://remix.reefscan.com/)
+
+### EVM Playground
+You can deploy and interact with smart contracts via EVM Playground UI.
+
+[> https://evm.reefscan.com](https://evm.reefscan.com)
+
 ### Developer Console
 You can connect to the developer UI for different networks:
 
 [Mainnet](https://console.reefscan.com/?rpc=wss%3A%2F%2Frpc.reefscan.com%2Fws#/explorer) | [Testnet](https://console.reefscan.com/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer)
 
 The metadata syncing with the [Polkadot browser extension](https://polkadot.js.org/extension/) will be offered to you automatically. Just click accept.
-
-### Block explorer
-Reefscan is the main block explorer for Reef chain.
-
-[Mainnet](https://reefscan.com) | [Testnet](https://testnet.reefscan.com)
-
-### Remix IDE
-Developers can use Remix IDE for Reef chain to quickly deploy and test their smart contracts.
-[https://remix.reefscan.com](https://remix.reefscan.com/)
-
-### EVM Playground
-You can deploy and interact with smart contracts via EVM Playground UI:
-[https://evm.reefscan.com](https://evm.reefscan.com)
-
 
 ## Developer SDKs
 
