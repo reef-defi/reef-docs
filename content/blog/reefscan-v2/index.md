@@ -28,6 +28,12 @@ However we have received a lot of requests for "The graph". Fortunately, Reefsca
 Hasura GraphQL server which makes it easy for web developers to connect with Reef chain
 data warehouse for faster and more powerful frontend applications.
 
+Fetch smart contracts example with Postgres:
+![](pg.png)
+
+Fetch smart contracts example with GraphQL:
+![](graphql.png)
+
 ## Reefscan APIs
 Reefscan also ships with multiple API endpoints that are useful for quickly implementing wallet
 enhancements and other features:
