@@ -40,7 +40,7 @@ Developers should upgrade to the latest versions of our [JavaScript](https://doc
 ## Ledger Nano support
 Reef chain firmware for Ledger hardware wallets is now available on [GitHub](https://github.com/reef-defi/ledger-reef). The firmware supports native Reef chain transactions related to REEF transfers, bonding and NPoS governance.
 
-![](ledger.png)
+![](ledger.jpeg)
 
 A user friendly UI with Ledger support is currently in development.
 
