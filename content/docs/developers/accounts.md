@@ -36,7 +36,7 @@ The `SS58 Address` is your wallet address. You can use it to receive payments an
 
 If you already have a mnemonic or random seed you can use it to obtain corresponding SR25519, ED25519 or ECDSA keypairs:
 ```
-./reef-node key inspect-key --scheme Sr25519 \
+./reef-node key inspect --scheme sr25519 \
   "any member stadium combine company grass jar wood brown second blame rocket"
 Secret phrase `any member stadium combine company grass jar wood brown second blame rocket` is account:
   Secret seed:      0xf087a7ebb71070624fede0758ed46facf24eddef78e2c4a96e3d0e6ee934472a

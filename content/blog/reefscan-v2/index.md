@@ -14,7 +14,7 @@ contributors: ["Reef Developers"]
 the ground up for Reef chain and DeFi.
 
 ## Reefscan UI Redesign
-Reefscan has a new look. It is the first Reef project utilizing components from the upcoming [Reef UI kit]().
+Reefscan has a new look. It is the first Reef project utilizing components from the upcoming [Reef UI kit](/docs/developers/ui_kit/).
 
 ![](redesign.png)
 
@@ -34,6 +34,9 @@ Fetch smart contracts example with Postgres:
 Fetch smart contracts example with GraphQL:
 ![](graphql.png)
 
+Check out the [Reefscan documentation](/docs/developers/reefscan/) to learn how to access the graph
+and other features.
+
 ## Reefscan APIs
 Reefscan also ships with multiple API endpoints that are useful for quickly implementing wallet
 enhancements and other features:
@@ -41,7 +44,7 @@ enhancements and other features:
  - An API for historic trading data on Reefswap DEX
  - An API for programmatically verifying smart contracts source code
  - An API for retreiving verified smart contract's source and ABI
- - and more
+ - and [more](/docs/developers/reefscan/#smart-contracts)
 
 ## Full Docker support
 Reefscan runs in Docker. Setting up the full Reefscan stack (Postgres, GraphQL, Backend & Frontend)

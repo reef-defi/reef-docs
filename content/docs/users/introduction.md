@@ -16,7 +16,7 @@ toc: true
 
 ## Get started
 
-(TODO user guide intro)
+If you're looking for things you can do with Reef, check out the [Reef Ecosystem](/docs/users/ecosystem).
 
 ### Build on Reef
 
@@ -36,7 +36,7 @@ Reef is fast, scalable, has low transaction costs and does no wasteful mining.
 
 Reef chain features next-gen blockchain technology, utilizing Nominated Proof of Stake, extensible EVM, on-chain upgradability, libp2p networking and state of the art cryptography.
 
-#### Fees
+### Fees
 Reef is efficient, and has a predictable algorithmic fee model. All fees from Reef chain usage are
 automatically burned.
 ```
@@ -45,7 +45,7 @@ automatically burned.
 | Making a payment            | $11.5      | $0.05      |
 | Executing an Uniswap trade  | $47.6      | $0.12      |
 | Deploying an ERC-20 Token   | $500+      | $1.95      |
-| Minting a NFT               | ...        | ...        |
+| Minting a NFT               | $500+      | $2.16      |
 ```
 *\*Last updated on Oct 20th 2021*
 

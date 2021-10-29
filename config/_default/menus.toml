@@ -1,5 +1,5 @@
 [[docs]]
-  name = "Users guide"
+  name = "User guide"
   weight = 10
   identifier = "users"
   url = "/docs/users/"
