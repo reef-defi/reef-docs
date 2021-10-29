@@ -13,7 +13,12 @@ weight: 240
 toc: true
 ---
 
-## Generate a keypair
+## New accounts
+
+{{< alert icon="⚠️" text="To create a Reef chain account, you need to deposit at least 1 REEF into it. This is also known as existential deposit." >}}
+
+Each account has a unique private key. You should never share your private key or seed with anyone.
+
 You can create a new random mnemonic and corresponding SR25519 keypair with `reef-node key generate`:
 
 ```
@@ -25,18 +30,21 @@ Secret phrase `any member stadium combine company grass jar wood brown second bl
   SS58 Address:     5HbFDCvjGmG2VRae2KN6kkYbYaspfdGb5n7LtZf1FfqvNrDt
 ```
 
-If you already have a mnemonic (seed) you can use it to obtain corresponding SR25519, ED25519 or ECDSA keypairs:
+The `SS58 Address` is your wallet address. You can use it to receive payments and check your balances/activity on the block explorer.
+
+## Inspect an existing account
+
+If you already have a mnemonic or random seed you can use it to obtain corresponding SR25519, ED25519 or ECDSA keypairs:
 ```
-./reef-node key inspect-key --scheme Ed25519 \
+./reef-node key inspect-key --scheme Sr25519 \
   "any member stadium combine company grass jar wood brown second blame rocket"
 Secret phrase `any member stadium combine company grass jar wood brown second blame rocket` is account:
   Secret seed:      0xf087a7ebb71070624fede0758ed46facf24eddef78e2c4a96e3d0e6ee934472a
-  Public key (hex): 0x4457741669d11953becab1e7ec348eef0885db824dfc92cd3bc06b3efb167071
-  Account ID:       0x4457741669d11953becab1e7ec348eef0885db824dfc92cd3bc06b3efb167071
-  SS58 Address:     5DcK6KBAdwXeGuz5zKRPfkz1gT5bK4LRCWtFxhWqNwNVgKvL
+  Public key (hex): 0xf47813a285f917a3c2a3eae00d94f1158761ad5105261e98bceb050ad8871638
+  Account ID:       0xf47813a285f917a3c2a3eae00d94f1158761ad5105261e98bceb050ad8871638
+  SS58 Address:     5HbFDCvjGmG2VRae2KN6kkYbYaspfdGb5n7LtZf1FfqvNrDt
 ```
 
-{{< alert icon="💡" text="The SR25519 keypairs can also be generated with Polkadot.js extension." >}}
 
 ## EVM Account
 
@@ -70,3 +78,26 @@ If you would like to import your existing Ethereum address into Reef chain, and 
 
 
 {{< alert icon="💡" text="The balances in Reef Account and its linked EVM address are invariant." >}}
+
+## Developer accounts
+For developers working on
+Developers working on Reef chain (starting the node with `--dev` flag) also have access to standard
+dummy accounts (alice, bob, charlie...) that are pre-funded with REEF.
+
+The mnemonic for those accounts is:
+`bottom drive obey lake curtain smoke basket hold race lonely fit walk`
+
+Accounts can be accessed through subkey scheme like so:
+```
+bottom drive obey lake curtain smoke basket hold race lonely fit walk//Alice
+bottom drive obey lake curtain smoke basket hold race lonely fit walk//Bob
+...
+```
+
+{{< alert icon="💡" text="Note the // notation. This is used to generate hierarchical deterministic (HD) wallets." >}}
+
+## Testnet accounts
+To create a testnet account simply generate a key with the extension or Reef node cli.
+
+
+Then request testnet REEF from the chatbot.  To get 1000 REEF testnet tokens simply type `!drip YOUR_SS58_ADDRESS` in the [Reef matrix chat](https://app.element.io/#/room/#reef:matrix.org).
