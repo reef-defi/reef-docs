@@ -4,7 +4,7 @@ description: "Reef v8 has been activated on mainnet on block xxxxxxx"
 lead: ""
 date: 2021-10-16T07:45:48+02:00
 lastmod: 2021-10-16T07:45:48+02:00
-draft: false
+draft: true
 weight: 50
 images: []
 contributors: ["Reef Developers"]

@@ -4,7 +4,7 @@ description: "Reefscan v2 is live. Reefscan is the main Reef chain block explore
 lead: ""
 date: 2021-10-14T07:45:48+02:00
 lastmod: 2021-10-14T07:45:48+02:00
-draft: false
+draft: true
 weight: 50
 images: []
 contributors: ["Reef Developers"]
