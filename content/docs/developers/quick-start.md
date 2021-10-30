@@ -1,5 +1,5 @@
 ---
-title: "Quick Start"
+title: "Quick start"
 description: "Get quickly up and running with Reef chain"
 lead: ""
 date: 2020-11-16T13:59:39+01:00
@@ -166,8 +166,13 @@ verify it on Reefscan, so that other developers can access its source code and A
 
 Verify your deployed contract on: [Mainnet](https://reefscan.com/verifyContract) or [Testnet](https://testnet.reefscan.com/verifyContract)
 
+{{< alert icon="💡" text="Remix and Reef Hardhat support automatic contract verification. You can skip this step if you use either of those tools." >}}
+
 ### Build an UI
-To start building an UI for your DApp, check the [UI examples repository](https://github.com/reef-defi/ui-examples). It provides components as well as [a single file React example](https://github.com/reef-defi/ui-examples/blob/master/packages/example-react/src/index.tsx), which contains most of the functionality you need to setup a DApp:
+If you would like to build an app quickly from pre-made components, check out the [Reef UI kit](/docs/developers/ui_kit/)
+for React, Vue and Angular.
+
+To start building a custom UI for your DApp, check the [UI examples repository](https://github.com/reef-defi/ui-examples). It provides components as well as [a single file React example](https://github.com/reef-defi/ui-examples/blob/master/packages/example-react/src/index.tsx), which contains most of the functionality you need to setup a DApp:
   - Polkadot.js extension connection
   - listing accounts in Polkadot.js extension
   - interacting with EVM contracts on the Reef Chain
@@ -175,3 +180,4 @@ To start building an UI for your DApp, check the [UI examples repository](https:
 
 
 [evm-canvas-ui](https://github.com/reef-defi/evm-canvas-ui) is a more sophisticated UI interacting with the Reef chain. It is built on top of Polkadot.js apps and uses `evm-provider.js` library to deploy and interact with the contracts.
+
