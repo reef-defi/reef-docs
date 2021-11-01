@@ -1,16 +1,16 @@
 ---
 title: "Reef chain v8 is live on mainnet"
-description: "Reef v8 has been activated on mainnet on block xxxxxxx"
+description: "Reef v8 has been activated on mainnet on block 1408888"
 lead: ""
-date: 2021-10-16T07:45:48+02:00
-lastmod: 2021-10-16T07:45:48+02:00
-draft: true
+date: 2021-11-02T07:45:48+02:00
+lastmod: 2021-11-02T07:45:48+02:00
+draft: false
 weight: 50
 images: []
 contributors: ["Reef Developers"]
 ---
 
-Reef v8 has been activated on mainnet on block [xxxxxxx](https://reefscan.com/block/?blockNumber=1242424).
+Reef v8 has been activated on mainnet on block [1408888](https://reefscan.com/block/?blockNumber=1408888).
 
 **Reef v8 is the largest blockchain upgrade since the Reef mainnnet launch on May 28th 2021**:
  - Upgraded from Polkadot Substrate 3 to Substrate 4
