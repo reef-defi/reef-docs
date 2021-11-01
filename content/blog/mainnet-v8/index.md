@@ -2,8 +2,8 @@
 title: "Reef chain v8 is live on mainnet"
 description: "Reef v8 has been activated on mainnet on block 1408888"
 lead: ""
-date: 2021-11-02T07:45:48+02:00
-lastmod: 2021-11-02T07:45:48+02:00
+date: 2021-11-01T00:00:00+02:00
+lastmod: 2021-11-01T00:00:00+02:00
 draft: false
 weight: 50
 images: []
