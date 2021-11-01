@@ -24,7 +24,7 @@ Reef v8 has been activated on mainnet on block [1408888](https://reefscan.com/bl
 
 ## Upgrade instructions
 This release also requires node upgrade.
-All users should upgrade the their Reef node to 4.0.0. Chain re-sync is not required.
+All users must upgrade the their Reef node to 4.0.0. Chain re-sync is not required.
 
 ```
 git checkout v8
@@ -35,7 +35,7 @@ You can read more about the release [here](https://github.com/reef-defi/reef-cha
 Full node compilation instructions are available [here](/docs/developers/nodes/).
 
 ## Ecosystem improvements
-Developers should upgrade to the latest versions of our [JavaScript](https://docs.reef.finance/docs/developers/js_libraries/) and [Python](https://github.com/reef-defi/py-reef-interface#readme) libraries.
+Developers need to upgrade to the latest versions of our [JavaScript](https://docs.reef.finance/docs/developers/js_libraries/) and [Python](https://github.com/reef-defi/py-reef-interface#readme) libraries.
 
 ## Ledger Nano support
 Reef chain firmware for Ledger hardware wallets is now available on [GitHub](https://github.com/reef-defi/ledger-reef). The firmware supports native Reef chain transactions related to REEF transfers, bonding and NPoS governance.
