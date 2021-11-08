@@ -21,7 +21,7 @@ The components can be used to build wallets, block explorers and dapps. They han
 
 A few open-source apps built with the UI kit are:
 
- - [Reef App](https://app.reef.finance) is a wallet, dex and token creator for Reef ([source](https://github.com/reef-defi/reef-app))
+ - [Reef App](https://app.reef.io) is a wallet, dex and token creator for Reef ([source](https://github.com/reef-defi/reef-app))
  - [Reefscan](https://reefscan.com) is a block explorer for Reef ([source](https://github.com/reef-defi/reef-explorer))
 
 

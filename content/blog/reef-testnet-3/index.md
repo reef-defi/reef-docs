@@ -17,4 +17,4 @@ With this release we have also shipped the **[EVM Playground](https://evm.reefsc
 interact with EVM smart contracts on Reef chain.
 
 
-[Spec Sheet](https://docs.reef.finance/docs/developers/networks/#reef-testnet) | [Developer Console](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer) | [Block Explorer](https://reefscan.com)
+[Spec Sheet](/docs/developers/networks/#reef-testnet) | [Developer Console](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer) | [Block Explorer](https://reefscan.com)

@@ -7,4 +7,4 @@ draft: true
 images: []
 ---
 
-{{< email user="hello" domain="reef.finance" >}}
+{{< email user="hello" domain="reef.io" >}}

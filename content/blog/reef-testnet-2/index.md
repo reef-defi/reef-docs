@@ -13,4 +13,4 @@ contributors: ["Reef Developers"]
 The Reef Testnet 2 is live. It mostly contains bugfixes and is aimed at developers.
 The main focus of this release is extensive testing and deployment of EVM applications on top of Reef chain.
 
-[Spec Sheet](https://docs.reef.finance/docs/developers/networks/#reef-testnet) | [Developer Console](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer) | [Block Explorer](https://reefscan.com)
+[Spec Sheet](/docs/developers/networks/#reef-testnet) | [Developer Console](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer) | [Block Explorer](https://reefscan.com)

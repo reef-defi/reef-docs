@@ -18,7 +18,7 @@ rpc/boot/validator nodes thanks to embedded wasm genesis runtimes.
 The node upgrade is optional, but recommended.
 
 ## Ecosystem improvements
-Developers should upgrade to the latest versions of our [JavaScript](https://docs.reef.finance/docs/developers/js_libraries/) and [Python](https://github.com/reef-defi/py-reef-interface#readme) libraries.
+Developers should upgrade to the latest versions of our [JavaScript](/docs/developers/js_libraries/) and [Python](https://github.com/reef-defi/py-reef-interface#readme) libraries.
 
 ## Remix ERC-20 Support
 [Reef Remix](https://remix.reefscan.com) makes it easy to deploy new tokens. The smart contract deployment and verification

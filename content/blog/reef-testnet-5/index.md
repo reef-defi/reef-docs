@@ -13,7 +13,7 @@ contributors: ["Reef Developers"]
 The main focus of this release is extensive testing and deployment of EVM applications on top of Reef chain. With this release we are also inviting new validators to start their node and participate in NPoS elections.
 
 
-[Spec Sheet](https://docs.reef.finance/docs/developers/networks/#reef-testnet) | [Developer Console](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer) | [Block Explorer](https://testnet.reefscan.com)
+[Spec Sheet](/docs/developers/networks/#reef-testnet) | [Developer Console](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer) | [Block Explorer](https://testnet.reefscan.com)
 
 ## Remix IDE
 Developers can use Remix IDE for Reef chain to quickly deploy and test their smart contracts.

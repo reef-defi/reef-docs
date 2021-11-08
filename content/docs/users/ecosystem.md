@@ -16,7 +16,7 @@ toc: true
 Looking for developer tools? Check out the [Developer resources](/docs/developers/resources/) page.
 
 ### Wallets
- - [Reef app](https://app.reef.finance) is a wallet/DEX/token creator for Reef. It requires a browser
+ - [Reef app](https://app.reef.io) is a wallet/DEX/token creator for Reef. It requires a browser
    extension.
  - [Polkadot Extension](https://polkadot.js.org/extension/) is a Chrome/Firefox browser extension
    for interacting with Reef chain (similar to Metamask).
