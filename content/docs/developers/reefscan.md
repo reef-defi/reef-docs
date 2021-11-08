@@ -36,10 +36,11 @@ Mainnet: https://reefscan.com/api/v3
 Testnet: https://testnet.reefscan.com/api/v3
 ```
 
-Here is an example query for getting chain stats:
 ![](/docs/developers/the_graph.png)
 
-(todo js example)
+#### Examples
+
+Here is an example query for getting chain stats:
 ```
 query Query_root {
   total {
@@ -47,7 +48,68 @@ query Query_root {
     name
   }
 }
-  ```
+```
+
+We can subscribe to smart contract events, following a similar interface to `eth_subscribe('logs')`:
+```
+import { gql } from '@apollo/client';
+
+export const CONTRACT_EVENTS_GQL = gql`
+          subscription events(
+            $blockNumber: bigint
+            $perPage: Int!
+            $offset: Int!
+            $contractAddressFilter: String!
+          ) {
+            event(
+              limit: $perPage
+              offset: $offset
+              where: {block_number: { _eq: $blockNumber }, section: { _eq: "evm" }, method: { _eq: "Log" }, data: {_like: $contractAddressFilter}}
+              order_by: { block_number: desc, event_index: desc }
+            ) {
+              block_number
+              event_index
+              data
+              method
+              phase
+              section
+              timestamp
+            }
+          }
+        `;
+```
+
+We can also find tokens and their balances for a specific account:
+```
+export const TOKEN_BALANCES_GQL = gql`
+          subscription tokenHolders(
+            $contractId: String!
+            $accountAddress: String!
+            $perPage: Int!
+            $offset: Int!
+          ) {
+            token_holder(
+              limit: $perPage
+              offset: $offset
+              where: {contract_id: { _eq: $contractId }, holder_evm_address: { _like: $accountAddress } }
+              order_by: { block_height: desc }
+            ) {
+              contract_id
+              holder_account_id
+              holder_evm_address
+              balance
+              block_height
+              timestamp
+            }
+          }
+        `;
+```
+
+A few more examples can also be found in:
+ - Reefscan block explorer is [open-source](https://github.com/reef-defi/reef-explorer), and all UI components use GraphQL as the backend.
+ - [UI-examples](https://github.com/reef-defi/ui-examples) has a few GraphQL [queries](https://github.com/reef-defi/ui-examples/blob/master/packages/example-react/src/gql.ts) as well
+ - [UI Kit](/docs/developers/ui_kit/) has pre-made components for common tasks
+
 
 ### Postgres database
 Power users who wish to have Reef chain data available in Postgres can run their own instance of
