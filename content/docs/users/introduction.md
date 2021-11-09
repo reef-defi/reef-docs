@@ -59,5 +59,5 @@ automatically burned.
 | Transaction finality        | 3600+ seconds       | 600+ seconds        | 40 seconds                     |
 | Block time                  | ~600 seconds        | ~17 seconds         | 10 seconds                     |
 | Max block size              | < 2MB               | N/A                 | 3.75MB                         |
-| Throughput                  | 7 tps               | 14 tps              | TBD                            |
+| Throughput                  | 7 tps               | 14 tps              | [465](/blog/reef-testnet-stress-test/) tps  |
 | Smart contracts             | No                  | Yes, EVM            | Yes, EVM                       |
