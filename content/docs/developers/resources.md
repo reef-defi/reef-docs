@@ -20,6 +20,11 @@ Reef comes with multiple open-source apps that are ready to use:
 
 ## Reef Developer Ecosystem
 
+
+### Reef browser extension
+Reef browser extension is like Metamask for Reef chain. The developer documentation is available on
+[Github](https://github.com/reef-defi/browser-extension#readme).
+
 ### Block explorer
 Reefscan is the main block explorer for Reef chain. It also supports full interaction with EVM smart
 contracts.
@@ -41,7 +46,7 @@ You can connect to the developer UI for different networks:
 
 [Mainnet](https://console.reefscan.com/?rpc=wss%3A%2F%2Frpc.reefscan.com%2Fws#/explorer) | [Testnet](https://console.reefscan.com/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/explorer)
 
-The metadata syncing with the [Polkadot browser extension](https://polkadot.js.org/extension/) will be offered to you automatically. Just click accept.
+The metadata syncing with the [Reef browser extension](/docs/users/extension) will be offered to you automatically. Just click accept.
 
 ## Developer SDKs
 

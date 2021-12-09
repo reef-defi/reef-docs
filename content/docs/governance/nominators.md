@@ -41,7 +41,7 @@ As mentioned before, we can use our bonded amount to either Nominate or Validate
 
 The `candidates` argument is a list of Account Id's of Validators we are voting for.
 
-[Example nominate call](https://i.imgur.com/i83GIPo.png) through the [staking UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-testnet.reefscan.com%2Fws#/staking).
+[Example nominate call](https://i.imgur.com/i83GIPo.png) through the [staking UI](https://console.reefscan.com/#/staking).
 
 {{< alert icon="💡" text="To withdraw the nominator commitment simply call `session.chill()`. It will take effect in the next era." >}}
 

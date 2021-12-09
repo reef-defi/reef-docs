@@ -20,8 +20,8 @@ as well as increase the NPoS validator slots.
 
 ## Reef Console
 ![](console.png)
-Reef Console is a Polkadot.js based UI with native Reef chain support. It is now available at
-[https://console.reefscan.com](https://console.reefscan.com)
+Reef Console offers a blockchain UI for advanced users. It covers accounts, extrinsics, RPC calls,
+scripts and more. [https://console.reefscan.com](https://console.reefscan.com)
 
 ## Remix IDE
 ![](remix.png)

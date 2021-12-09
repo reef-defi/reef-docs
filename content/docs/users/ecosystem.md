@@ -18,8 +18,10 @@ Looking for developer tools? Check out the [Developer resources](/docs/developer
 ### Wallets
  - [Reef app](https://app.reef.io) is a wallet/DEX/token creator for Reef. It requires a browser
    extension.
+ - [Reef Extension](/docs/users/extension) is a Chrome/Firefox browser extension
+   for interacting with Reef chain (similar to Metamask). Also supports Ledger hardware wallet.
  - [Polkadot Extension](https://polkadot.js.org/extension/) is a Chrome/Firefox browser extension
-   for interacting with Reef chain (similar to Metamask).
+   for interacting with Reef chain.
  - [Klever](https://klever.io/) offers a mobile wallet with Reef support. They also have a Binance chain to Reef liquidity bridge.
 
 ### Block explorers

@@ -70,7 +70,7 @@ Alternatively, we can generate the default address manually by calling the `evmA
 
 To see our EVM address we can call `evmAccounts.evmAddresses(AccountId)`.
 
-Check out [this guide](https://imgur.com/a/PcQ300l) on how to generate and check an EVM address within Polkadot.js UI.
+Check out [this guide](https://imgur.com/a/PcQ300l) on how to generate and check an EVM address within EVM playground UI.
 
 ### Linking an existing Ethereum address
 

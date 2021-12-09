@@ -47,9 +47,9 @@ the blockchain architecture.
 
 Fortunately we have drop in replacements for most commonly used tools.
 
-| Ethereum        |        | Reef Chain                                                   |
-| --------------- | ------ | ------------------------------------------------------------ |
-| Metamask        |   -->   | [Polkadot Extension](https://polkadot.js.org/extension/)     |
+| Ethereum        |         | Reef Chain                                                   |
+| --------------- | ------  | ------------------------------------------------------------ |
+| Metamask        |   -->   | [Reef Extension](/docs/users/extension)                      |
 | web3            |   -->   | [@reef-defi/evm-provider](https://github.com/reef-defi/evm-provider.js) |
 | Truffle/Hardhat |   -->   | [Reef Hardhat](https://github.com/reef-defi/hardhat-reef)    |
 | Remix IDE       |   -->   | [Reef Remix](https://remix.reefscan.com/)                    |
@@ -173,11 +173,11 @@ If you would like to build an app quickly from pre-made components, check out th
 for React, Vue and Angular.
 
 To start building a custom UI for your DApp, check the [UI examples repository](https://github.com/reef-defi/ui-examples). It provides components as well as [a single file React example](https://github.com/reef-defi/ui-examples/blob/master/packages/example-react/src/index.tsx), which contains most of the functionality you need to setup a DApp:
-  - Polkadot.js extension connection
-  - listing accounts in Polkadot.js extension
+  - Reef extension connection
+  - listing accounts in Reef extension
   - interacting with EVM contracts on the Reef Chain
   - generating Substrate addresses
 
 
-[evm-canvas-ui](https://github.com/reef-defi/evm-canvas-ui) is a more sophisticated UI interacting with the Reef chain. It is built on top of Polkadot.js apps and uses `evm-provider.js` library to deploy and interact with the contracts.
+[evm-canvas-ui](https://github.com/reef-defi/evm-canvas-ui) is a more sophisticated UI interacting with the Reef chain. It is built on top of Reef.js and uses `evm-provider.js` library to deploy and interact with the contracts.
 
