@@ -19,6 +19,8 @@ Reef UI kit contains pre-made components for building dapps on Reef. It comes wi
 
 The components can be used to build wallets, block explorers and dapps. They handle thigs like account selection, wallets, balances, token holdings, NFTs, various transaction types and events, etc.
 
+The UI kit comes with an example set for various frameworks, available at [https://github.com/reef-defi/ui-examples](https://github.com/reef-defi/ui-examples)
+
 A few open-source apps built with the UI kit are:
 
  - [Reef App](https://app.reef.io) is a wallet, dex and token creator for Reef ([source](https://github.com/reef-defi/reef-app))
@@ -34,12 +36,13 @@ Adding the Reef UI Kit for React is as easy as:
 ```
 yarn add @reef-defi/react-lib
 ```
+React examples are available [here](https://github.com/reef-defi/ui-examples/tree/master/packages/example-react).
 
-(todo examples)
+Furthermore, all major Reef apps are built with React, and can be used as a reference.
 
 ### Vue
-(todo)
+Vue examples are available [here](https://github.com/reef-defi/ui-examples/tree/master/packages/example-vue).
 
 ### Angular
-(todo)
+Angular examples are available [here](https://github.com/reef-defi/ui-examples/tree/master/packages/example-angular).
 
