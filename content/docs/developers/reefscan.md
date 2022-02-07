@@ -30,10 +30,10 @@ Reefscan offers 3 solutions for various use cases:
 ### The Graph
 Reefscan comes with a public GraphQL service, also known as "The Graph".
 
-It is available for both mainnet and testnet, on `/api/v3`:
+It is available for both mainnet and testnet, on `/graphql`:
 ```
-Mainnet: https://reefscan.com/api/v3
-Testnet: https://testnet.reefscan.com/api/v3
+Mainnet: https://reefscan.com/graphql
+Testnet: https://testnet.reefscan.com/graphql
 ```
 
 ![](/docs/developers/the_graph.png)
