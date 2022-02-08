@@ -50,59 +50,45 @@ query ChainInfo {
 }
 ```
 
-We can subscribe to smart contract events, following a similar interface to `eth_subscribe('logs')`:
+We can subscribe to smart contract events, following a similar interface to Ethereum's `eth_subscribe('logs')`:
 ```
 import { gql } from '@apollo/client';
 
 export const CONTRACT_EVENTS_GQL = gql`
-          subscription events(
-            $blockNumber: bigint
-            $perPage: Int!
-            $offset: Int!
-            $contractAddressFilter: String!
-          ) {
-            event(
-              limit: $perPage
-              offset: $offset
-              where: {block_number: { _eq: $blockNumber }, section: { _eq: "evm" }, method: { _eq: "Log" }, data: {_like: $contractAddressFilter}}
-              order_by: { block_number: desc, event_index: desc }
-            ) {
-              block_number
-              event_index
-              data
-              method
-              phase
-              section
-              timestamp
+    subscription evmEvent($address: String!, $perPage: Int!, $offset: Int!, $topic0: String){
+        evm_event(
+        limit: $perPage,
+        offset: $offset
+        order_by: {block_id: desc, extrinsic_index: desc, event_index: desc},
+        where: {
+            contract_address: {_eq: $address},
+            topic_0: {_eq:$topic0},
+            method: {_eq: "Log"}
             }
-          }
-        `;
+        ) {
+        contract_address
+        data_parsed
+        data_raw
+        topic_0
+        topic_1
+        topic_2
+        topic_3
+      }
+    }
+`;
 ```
 
 We can also find tokens and their balances for a specific account:
 ```
-export const TOKEN_BALANCES_GQL = gql`
-          subscription tokenHolders(
-            $contractId: String!
-            $accountAddress: String!
-            $perPage: Int!
-            $offset: Int!
-          ) {
-            token_holder(
-              limit: $perPage
-              offset: $offset
-              where: {contract_id: { _eq: $contractId }, holder_evm_address: { _like: $accountAddress } }
-              order_by: { block_height: desc }
-            ) {
-              contract_id
-              holder_account_id
-              holder_evm_address
-              balance
-              block_height
-              timestamp
-            }
-          }
-        `;
+subscription query ($accountId: String!) {
+    token_holder(
+      order_by: { balance: desc }
+      where: { signer: { _eq: $accountId } }
+    ) {
+      token_address
+      balance
+    }
+  }
 ```
 
 A few more examples can also be found in:
