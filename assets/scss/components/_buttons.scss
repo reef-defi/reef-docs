@@ -72,3 +72,81 @@ body.dark .toggle-dark {
   content: "Copied";
   display: block;
 }
+
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  > * {
+    & + * {
+      margin-left: 20px;
+    }
+  }
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7def0;
+  border: none;
+  white-space: nowrap;
+  border-radius: 3rem;
+  font-size: 17px;
+  line-height: 22.984px;
+  font-weight: 300;
+  padding: 1.2rem 1.6rem;
+  transition: all 2s;
+  text-decoration: none;
+  color: white;
+  background: #681cff;
+  box-shadow: 0 0.313rem 1.25rem -0.625rem #681cff;
+
+  svg {
+    width: 1.5rem;
+    margin-left: -0.375rem;
+    margin-right: 0.75rem;
+    z-index: 1;
+    color: white;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    color: white;
+  }
+
+  &::after {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #fd3f83);
+    transform: translateY(100%);
+    transition: opacity 0.6s linear, transform 0.6s linear;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  &:active {
+    transition: none;
+    filter: brightness(1.3);
+  }
+}
