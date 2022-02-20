@@ -2,9 +2,9 @@
 title: "Reefscan v2 is live"
 description: "Reefscan v2 is live. Reefscan is the main Reef chain block explorer."
 lead: ""
-date: 2022-02-13T07:45:48+02:00
-lastmod: 2022-02-13T07:45:48+02:00
-draft: true
+date: 2022-02-20T07:45:48+02:00
+lastmod: 2022-02-20T07:45:48+02:00
+draft: false
 weight: 50
 images: []
 contributors: ["Reef Developers"]
@@ -51,7 +51,6 @@ enhancements and other features:
 ## Full Docker support
 Reefscan runs in Docker. Setting up the full Reefscan stack (Postgres, GraphQL, Backend & Frontend) is as easy as:
 ```
-yarn
 make net=mainnet env=prod up
 ```
 Check out the full [documentation](https://github.com/reef-defi/reef-explorer#readme) on setting up and configuring your own, production grade instance of Reefscan.
