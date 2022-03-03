@@ -31,6 +31,9 @@ Looking for developer tools? Check out the [Developer resources](/docs/developer
 ### DeFi
  - [Reefswap](https://reefswap.com) is the Uniswap v2 based DEX for Reef chain tokens.
 
+### NFTs
+ - [Sqwid](https://sqwid.app/) is the first Reef chain native NFT marketplace.
+
 ### Tutorials
  - [YouTube](https://www.youtube.com/playlist?list=PLkhTawnkvgfiHb7wIM932vp73V4Y2Sjfh) channel with
    video guides for Reef chain
