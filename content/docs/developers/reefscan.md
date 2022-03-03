@@ -55,26 +55,40 @@ We can subscribe to smart contract events, following a similar interface to Ethe
 import { gql } from '@apollo/client';
 
 export const CONTRACT_EVENTS_GQL = gql`
-    subscription evmEvent($address: String!, $perPage: Int!, $offset: Int!, $topic0: String){
-        evm_event(
-        limit: $perPage,
-        offset: $offset
-        order_by: {block_id: desc, extrinsic_index: desc, event_index: desc},
-        where: {
-            contract_address: {_eq: $address},
-            topic_0: {_eq:$topic0},
-            method: {_eq: "Log"}
-            }
-        ) {
-        contract_address
-        data_parsed
-        data_raw
-        topic_0
-        topic_1
-        topic_2
-        topic_3
+  subscription evmEvent(
+    $address: String_comparison_exp!
+    $perPage: Int!
+    $offset: Int!
+    $topic0: String_comparison_exp
+  ) {
+    evm_event(
+      limit: $perPage
+      offset: $offset
+      order_by: [
+        { block_id: desc }
+        { extrinsic_index: desc }
+        { event_index: desc }
+      ]
+      where: {
+        _and: [
+          { contract_address: $address }
+          { topic_0: $topic0 }
+          { method: { _eq: "Log" } }
+        ]
       }
+    ) {
+      contract_address
+      data_parsed
+      data_raw
+      topic_0
+      topic_1
+      topic_2
+      topic_3
+      block_id
+      extrinsic_index
+      event_index
     }
+  }
 `;
 ```
 
