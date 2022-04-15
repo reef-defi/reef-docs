@@ -27,6 +27,8 @@ Looking for developer tools? Check out the [Developer resources](/docs/developer
 ### Block explorers
  - [Reefscan](https://reefscan.com) is the main block explorer for Reef. It also allows one to
    interact with Smart contracts deployed on Reef chain.
+ - [Subscan](https://reef.subscan.io/) offers a Reef chain explorer with comprehensive NPoS staking
+   statistics and charts.
 
 ### DeFi
  - [Reefswap](https://reefswap.com) is the Uniswap v2 based DEX for Reef chain tokens.
