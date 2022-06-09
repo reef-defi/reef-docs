@@ -93,6 +93,88 @@ import { Keyring } from '@polkadot/api';
 const keyring = new Keyring({ type: 'sr25519' });
 ```
 
+### Sign and verify custom messages
+
+##### Signing with Keyring
+
+We can exchange signatures and perform verification both with the public key as well as the `Alice` address:
+
+```javascript
+const { stringToU8a, u8aToHex } = require("@reef-defi/util");
+const { cryptoWaitReady, signatureVerify } = require("@polkadot/util-crypto");
+const { Keyring } = require("@reef-defi/keyring");
+
+const main = async () => {
+  await cryptoWaitReady();
+
+  const keyring = new Keyring({ type: "sr25519" });
+
+  // create Alice based on the development seed
+  const alice = keyring.addFromUri("//Alice");
+
+  // create the message, actual signature
+  const message = stringToU8a("custom message");
+  const signature = alice.sign(message);
+
+  // Verify with `public key`
+  let isValid = alice.verify(message, signature, alice.publicKey);
+  console.log(`${u8aToHex(signature)} is ${isValid ? "valid" : "invalid"}`);
+
+  // Verify with `address`
+  isValid = signatureVerify(message, signature, alice.address);
+  console.log(`${u8aToHex(signature)} is ${isValid ? "valid" : "invalid"}`);
+};
+
+main().catch((error) => console.log(error));
+```
+
+##### Signing with a browser extension
+
+Sometimes you would like to sign custom messages with the [Reef browser extension](/docs/users/extension/). First, you have to [obtain](https://github.com/reef-defi/browser-extension#usage) `injectedAccounts` from the extension. Then you can sign and verify with the following code:
+
+```javascript
+import { stringToHex, u8aToHex } from "@polkadot/util";
+import { cryptoWaitReady, decodeAddress, signatureVerify } from '@polkadot/util-crypto';
+
+// we select the first account for the purpose of demonstration
+const account = injectedAccounts[0];
+const injector = await web3FromSource(account.meta.source);
+
+// the injector object has a signer and a signRaw method
+const signRaw = injector?.signer?.signRaw;
+
+if (!!signRaw) {
+    const message = "custom message";
+
+    // after making sure that signRaw is defined
+    // we can use it to sign our message
+    const { signature } = await signRaw({
+        address: account.address,
+        data: stringToHex(message),
+        type: 'bytes'
+    });
+
+    // VERIFICATION
+    const isValidSignature = (signedMessage: any, signature: any, address: any) => {
+      const publicKey = decodeAddress(address);
+      const hexPublicKey = u8aToHex(publicKey);
+
+      return signatureVerify(signedMessage, signature, hexPublicKey).isValid;
+    };
+
+    // Some interfaces, such as using sr25519 are only available via WASM
+    await cryptoWaitReady();
+
+    // `signRaw` method wraps the message with `<Bytes>` tag before signing
+    const isValid = isValidSignature(
+      `<Bytes>${message}</Bytes>`,
+      signature,
+      account.address
+    );
+    console.log(isValid)
+}
+```
+
 #### Adding accounts
 
 The recommended catch-all approach to adding accounts is via ``.addFromUri(<suri>, [meta], [type])`` function, where only the `suri` param is required. For instance to add an account via mnemonic, you would do the following:
