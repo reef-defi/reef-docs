@@ -15,7 +15,7 @@ toc: true
 
 ## What is Reef UI kit?
 
-Reef UI kit contains pre-made components for building dapps on Reef. It comes with a consistent design language and support for most popular web frameworks.
+Reef UI kit contains [pre-made components](https://ui-kit.reef.io/) for building dapps on Reef. It comes with a consistent design language and support for most popular web frameworks.
 
 The components can be used to build wallets, block explorers and dapps. They handle thigs like account selection, wallets, balances, token holdings, NFTs, various transaction types and events, etc.
 
