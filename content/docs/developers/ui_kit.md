@@ -21,9 +21,12 @@ The components can be used to build wallets, block explorers and dapps. They han
 
 The UI kit comes with an example set for various frameworks, available at [https://github.com/reef-defi/ui-examples](https://github.com/reef-defi/ui-examples)
 
+The UI kit is also available on [npm](https://www.npmjs.com/package/@reef-defi/ui-kit).
+
 A few open-source apps built with the UI kit are:
 
  - [Reef App](https://app.reef.io) is a wallet, dex and token creator for Reef ([source](https://github.com/reef-defi/reef-app))
+ - [Reef Extension](/docs/users/extension/) is a wallet, dex and token creator for Reef ([source](https://github.com/reef-defi/browser-extension))
  - [Reefscan](https://reefscan.com) is a block explorer for Reef ([source](https://github.com/reef-defi/reef-explorer))
 
 
