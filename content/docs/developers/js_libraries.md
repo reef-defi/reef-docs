@@ -223,6 +223,34 @@ console.log(`The signature ${u8aToHex(signature)}, is ${isValid ? '' : 'in'}vali
 
 For more options and methods using the `reef.js`, please refer to the [Polkadot.js documentation](https://polkadot.js.org/docs/api). Now we will take a look at the `evm-provider.js` wrapper, which simplifies a lot of things and allows to interact with the underlying EVM engine through `ethers.js` API.
 
+### Batching multiple transactions
+
+By using `utility` pallet provided by the chain, we can batch multiple transactions in a single signed call. The below example will transfer 200 REEF to the `RECEIPENT_ADDRESS`. We can batch different types of transactions as well.
+
+```
+// Setup transfer extrinsic
+const RECEIPENT_ADDRESS = "addr";
+const SINGLE_REEF = BigNumber.from("1000000000000000000");
+const TRANSFER_AMOUNT = SINGLE_REEF.mul(100);
+
+const transfer = provider.api.tx.balances.transfer(
+  RECEIPENT_ADDRESS,
+  TRANSFER_AMOUNT.toString()
+);
+
+const transfer1 = provider.api.tx.balances.transfer(
+  RECEIPENT_ADDRESS,
+  SINGLE_REEF.mul(100).toString()
+);
+
+const batch = provider.api.tx.utility.batch([transfer, transfer1]);
+
+const hash = await batch.signAndSend(signer);
+console.log("Hash:", hash.toHex());
+```
+
+The fee for a batch transaction is usually less than the sum of the fees for each individual transaction.
+
 
 ## evm-provider.js
 
