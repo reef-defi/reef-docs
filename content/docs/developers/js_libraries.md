@@ -251,6 +251,8 @@ console.log("Hash:", hash.toHex());
 
 The fee for a batch transaction is usually less than the sum of the fees for each individual transaction.
 
+For atomic transactions (all succeed or all fail), use `utility.batchAll` method instead of `batch`.
+
 
 ## evm-provider.js
 
