@@ -408,6 +408,16 @@ REEF token is the native currency of the Reef chain, meaning a `.transfer()` on 
 
 If you want to simplify the setup, you may opt for the Hardhat Reef plugin, which is explained in the next section.
 
+### Which API can I use to query by transaction hash?
+There is no such API. Substrate does not expose a "query-by-tx-hash" RPC, nor are transactions indexed by hash on the Substrate node.
+The reason for this is that transaction hashes are non-unique across the chain, although they will generally be unique inside a block.
+
+Please use [GraphQL](/docs/developers/reefscan/#the-graph) for this purpose.
+
+### How to query EVM events and logs?
+
+Please use [GraphQL](/docs/developers/reefscan/#the-graph) for this purpose.
+
 ## Hardhat
 
 Javascript developers can use [Reef Hardhat plugin](https://github.com/reef-defi/hardhat-reef) to develop, deploy and test smart contracts on the Reef chain. A few working examples can be found in [hardhat-reef-examples repo](https://github.com/reef-defi/hardhat-reef-examples). A hardhat reef template can be found [here](https://github.com/reef-defi/hardhat-reef-template).
