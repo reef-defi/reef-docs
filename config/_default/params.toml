@@ -4,12 +4,12 @@
 title = "Reef"
 titleSeparator = "-"
 titleAddition = "Reef Chain Documentation"
-description = "Reef Chain is an EVM compatible chain for DeFi. It is built with Polkadot Substrate and uses Nominated Proof of Stake consensus."
+description = "Reef Chain is an EVM compatible chain for DeFi, NFTs and games. It is built with Parity Substrate and uses Nominated Proof of Stake consensus."
 
 ## Open Graph + Twitter Cards
 images = ["reef.png"]
-twitterSite = "ReefDefi"
-twitterCreator = "ReefDefi"
+twitterSite = "reef_chain"
+twitterCreator = "reef_chain"
 facebookAuthor = ""
 facebookPublisher = ""
 ogLocale = "en_US"
@@ -17,7 +17,7 @@ ogLocale = "en_US"
 ## JSON-LD
 schemaType = "Organization"
 schemaLogo = "reef.png"
-schemaTwitter = "https://twitter.com/ReefDeFi"
+schemaTwitter = "https://twitter.com/reef_chain"
 schemaLinkedIn = ""
 schemaGitHub = "https://github.com/reef-defi"
 schemaSection = "blog"
