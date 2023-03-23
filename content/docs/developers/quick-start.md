@@ -150,7 +150,7 @@ Deploying on testnet is similar to development, however there are 2 things we ne
 
 2.) Create an [account](/docs/developers/accounts/) and obtain testnet REEF tokens from the faucet.
 
-To get 1000 REEF testnet tokens simply type `!drip <YOUR_ADDRESS>` in [Reef matrix chat](https://app.element.io/#/room/#reef:matrix.org).
+To get 2000 REEF testnet tokens, join us in [Reef's Discord server](https://discord.gg/invite/DHpr7sCeGa). Verify your account, then select the Builder role in `📋┊start-here`. You will get access to the Reef chain testnet faucet in `🚰┊faucet`.
 
 ### Deploy on mainnet
 Deploying on mainnet is similar to development, however there are 2 things we need.

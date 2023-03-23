@@ -28,6 +28,6 @@ Users:
 - [User Discord](https://discord.com/invite/reefchain)
 
 Developers:
-- [Matrix developer chat](https://app.element.io/#/room/#reef:matrix.org)
+- [Discord server](https://discord.gg/invite/DHpr7sCeGa)
 - [GitHub issues](https://github.com/reef-defi/reef-chain/issues)
 

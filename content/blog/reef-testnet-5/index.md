@@ -25,4 +25,4 @@ You can give Reef Remix a try at [https://remix.reefscan.com](https://remix.reef
 More advanced developers can now enjoy a native [Hardhat](https://hardhat.org/) integration. Check out our [Reef Hardhat](https://github.com/reef-defi/hardhat-reef) page to get started.
 
 ## Testnet Faucet
-The testnet faucet chatbot is live. To get 1000 REEF testnet tokens simply type `!drip <YOUR_ADDRESS>` in [Reef matrix chat](https://app.element.io/#/room/#reef:matrix.org).
+We are inviting developers to join us in [Reef's Discord server](https://discord.gg/invite/DHpr7sCeGa) with any questions related to Reef chain. Make sure to verify your account, then select the Builder role in `📋┊start-here`. You will get access to the Reef chain testnet faucet in `🚰┊faucet`.
