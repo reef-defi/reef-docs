@@ -65,4 +65,4 @@ Developers can use our [Python library](https://pypi.org/project/reef-interface/
 
 
 ## Help
-You can ask technical questions in our matrix.org developer [chat](https://app.element.io/#/room/#reef:matrix.org) room `#reef:matrix.org`.
+You can ask technical questions in our [Discord server](https://discord.gg/invite/DHpr7sCeGa).

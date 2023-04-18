@@ -99,5 +99,4 @@ bottom drive obey lake curtain smoke basket hold race lonely fit walk//Bob
 ## Testnet accounts
 To create a testnet account simply generate a key with the extension or Reef node cli.
 
-
-Then request testnet REEF from the chatbot.  To get 1000 REEF testnet tokens simply type `!drip YOUR_SS58_ADDRESS` in the [Reef matrix chat](https://app.element.io/#/room/#reef:matrix.org).
+Then request testnet REEF from the chatbot.  To get 2000 REEF testnet tokens, join us in [Reef's Discord server](https://discord.gg/invite/DHpr7sCeGa). Verify your account, then select the Builder role in `📋┊start-here`. You will get access to the Reef chain testnet faucet in `🚰┊faucet`.

@@ -34,4 +34,4 @@ Reefscan now supports [smart contract validation](https://testnet.reefscan.com/v
 Example of verified contract can be found [here](https://testnet.reefscan.com/contract/0xcf9f1e174559b9681b163a0f3985bd3a1434ef9c).
 
 ## Developer support
-We are inviting developers to join us in [Reef matrix chat](https://app.element.io/#/room/#reef:matrix.org) with any questions related to Reef chain. The developer chat can also be used to interact with the automated Reef chain testnet faucet.
+We are inviting developers to join us in [Reef's Discord server](https://discord.gg/invite/DHpr7sCeGa) with any questions related to Reef chain. Make sure to verify your account, then select the Builder role in `📋┊start-here`. You will get access to the Reef chain testnet faucet in `🚰┊faucet`.

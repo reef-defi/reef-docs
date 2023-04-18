@@ -45,4 +45,4 @@ Reef chain firmware for Ledger hardware wallets is now available on [GitHub](htt
 A user friendly UI with Ledger support is currently in development.
 
 ## Developer support
-We are inviting developers to join us in [Reef matrix chat](https://app.element.io/#/room/#reef:matrix.org) with any questions related to Reef chain. The developer chat can also be used to interact with the automated Reef chain testnet faucet.
+We are inviting developers to join us in [Reef's Discord server](https://discord.gg/invite/DHpr7sCeGa) with any questions related to Reef chain. Make sure to verify your account, then select the Builder role in `📋┊start-here`. You will get access to the Reef chain testnet faucet in `🚰┊faucet`.

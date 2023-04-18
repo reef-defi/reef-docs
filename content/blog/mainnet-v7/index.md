@@ -37,4 +37,4 @@ Reefscan now supports full interaction with smart contracts deployed on Reef cha
 ![](reefscan-1.png)
 
 ## Developer support
-We are inviting developers to join us in [Reef matrix chat](https://app.element.io/#/room/#reef:matrix.org) with any questions related to Reef chain. The developer chat can also be used to interact with the automated Reef chain testnet faucet.
+We are inviting developers to join us in [Reef's Discord server](https://discord.gg/invite/DHpr7sCeGa) with any questions related to Reef chain. Make sure to verify your account, then select the Builder role in `📋┊start-here`. You will get access to the Reef chain testnet faucet in `🚰┊faucet`.
