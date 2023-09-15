@@ -32,8 +32,8 @@ Reef uses a public GraphQL service from Subsquid that indexes all onchain events
 
 It is available for both mainnet and testnet, under following URIs:
 ```
-Mainnet: [https://reefscan.com/graphql](https://squid.subsquid.io/reef-explorer/graphql)
-Testnet: [https://testnet.reefscan.com/graphql](https://squid.subsquid.io/reef-explorer-testnet/graphql)
+Mainnet: https://squid.subsquid.io/reef-explorer/graphql
+Testnet: https://squid.subsquid.io/reef-explorer-testnet/graphql
 ```
 The URIs provides a GraphQL Playground interface for testing queries aswell.
 
