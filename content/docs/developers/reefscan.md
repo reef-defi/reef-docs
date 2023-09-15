@@ -40,69 +40,123 @@ The URIs provides a GraphQL Playground interface for testing queries aswell.
 ![](/docs/developers/the_graph.png)
 
 #### Examples
+The graphql endpoints support 3 types of operations: `Query` , `Subscription` and `Mutation`. Here we will discuss examples of each of these. You can see the schema for each of these by going into corresponding docs on the top right side of Graphql playground.
 
-Here is an example query for getting chain stats:
+##### Query
+A Query is a specific request allowing user to specify structure & shape of the response they want to receive.
+here is a query for getting chain stats:
 ```
 query ChainInfo {
-  chain_info {
-    name
+  chainInfos(limit: 10) {
     count
+    id
   }
 }
 ```
+In this example we are querying the chain info , the parameters which we are requesting are `count` and `id`, the `limit` clause is used to limit the response array size. 
 
-We can subscribe to smart contract events, following a similar interface to Ethereum's `eth_subscribe('logs')`:
+![](/docs/developers/response_chainInfos.png)
+
+##### Subscription
+
+A `Subscription` is like a live stream that keeps sending you updates whenever something interesting happens, so you always have the latest information.
+
+We can subscribe to the evmEvents like this
+
 ```
 import { gql } from '@apollo/client';
 
-export const CONTRACT_EVENTS_GQL = gql`
-  subscription evmEvent(
-    $address: String_comparison_exp!
-    $perPage: Int!
-    $offset: Int!
-    $topic0: String_comparison_exp
-  ) {
-    evm_event(
-      limit: $perPage
-      offset: $offset
-      order_by: [
-        { block_id: desc }
-        { extrinsic_index: desc }
-        { event_index: desc }
-      ]
-      where: {
-        _and: [
-          { contract_address: $address }
-          { topic_0: $topic0 }
-          { method: { _eq: "Log" } }
-        ]
-      }
-    ) {
-      contract_address
-      data_parsed
-      data_raw
-      topic_0
-      topic_1
-      topic_2
-      topic_3
-      block_id
-      extrinsic_index
-      event_index
+export const EVM_EVENTS_GQL = gql`
+ subscription MySubscription {
+  evmEvents(limit: 10) {
+    block {
+      height
     }
+    contractAddress
+    id
+    type
   }
-`;
+}`;
+```
+Here we are requesting the server to send us data whenever any event occurs, we are getting a stream of data. Here we are just fetching block `height`, contract `address`, `id` of event and the `type` of event. We can modify the structure and shape as we want.
+
+To make it more intuitive you can always check the response of any query here in the playground
+![](/docs/developers/response_evmEvents.png)
+
+You can use this data inside your websites/apps as well. Here is a basic example for it. Here in this example we are using axios to make requests you can use apollo as well.
+
+```
+// This is the query 
+const EVM_EVENT_QUERY = `
+    query evmEvent(
+      $address: String_comparison_exp!
+      $blockId: bigint_comparison_exp!
+      $topic0: String_comparison_exp
+    ) {
+      evm_event(
+        order_by: [
+          { block_id: desc }
+          { extrinsic_index: desc }
+          { event_index: desc }
+        ]
+        where: {
+          _and: [
+            { contract_address: $address }
+            { topic_0: $topic0 }
+            { method: { _eq: "Log" } }
+            { block_id: $blockId }
+          ]
+        }
+      ) {
+        contract_address
+        data_parsed
+        data_raw
+        topic_0
+        topic_1
+        topic_2
+        topic_3
+        block_id
+        extrinsic_index
+        event_index
+      }
+    }
+  `;
+
+  const gqlObject = {query: EVM_EVENT_QUERY,
+    variables: {
+      address: { _eq: contractAddress },
+      topic0: methodSignature
+        ? { _eq: utils.keccak256(utils.toUtf8Bytes(methodSignature)) }
+        : {},
+      blockId: toBlockId
+        ? { _gte: fromBlockId, _lte: toBlockId }
+        : { _eq: fromBlockId },
+    },}
+
+  const gqlEndpoint = "https://squid.subsquid.io/reef-explorer/graphql";
+
+  const gqlReq = {
+      method: "post",
+      url: gqlEndpoint,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: gqlObject,
+    };
+  
+  // to get the response
+  const resp = await axios(gqlReq);
+  console.log(resp.data)
+
 ```
 
 We can also find tokens and their balances for a specific account:
 ```
 subscription query ($accountId: String!) {
-    token_holder(
-      order_by: { balance: desc }
-      where: { signer: { _eq: $accountId } }
-    ) {
-      token_address
-      balance
-    }
+  tokenHolders(orderBy: balance_DESC, limit: 10,where: {id_eq: $accountId}) {
+    balance
+    id
+  }
   }
 ```
 
