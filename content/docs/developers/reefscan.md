@@ -28,13 +28,14 @@ Reefscan offers 3 solutions for various use cases:
  - HTTP API for developers
 
 ### The Graph
-Reefscan comes with a public GraphQL service, also known as "The Graph".
+Reef uses a public GraphQL service from Subsquid that indexes all onchain events at blazing speeds.
 
-It is available for both mainnet and testnet, on `/graphql`:
+It is available for both mainnet and testnet, under following URIs:
 ```
-Mainnet: https://reefscan.com/graphql
-Testnet: https://testnet.reefscan.com/graphql
+Mainnet: [https://reefscan.com/graphql](https://squid.subsquid.io/reef-explorer/graphql)
+Testnet: [https://testnet.reefscan.com/graphql](https://squid.subsquid.io/reef-explorer-testnet/graphql)
 ```
+The URIs provides a GraphQL Playground interface for testing queries aswell.
 
 ![](/docs/developers/the_graph.png)
 
