@@ -78,16 +78,10 @@ export const EVM_EVENTS_GQL = gql`
   }
 }`;
 ```
-Here we are requesting the server to send us data whenever any event occurs, we are getting a stream of data. Here we are just fetching block `height`, contract `address`, `id` of event and the `type` of event. We can modify the structure and shape as we want.
-
-To make it more intuitive you can always check the response of any query here in the playground
-![](/docs/developers/response_evmEvents.png)
-
-You can use this data inside your websites/apps as well. Here is a basic example for it. Here in this example we are using axios to make requests you can use apollo as well.
+Here we are requesting the server to send us data whenever any event occurs, we are getting a stream of data. In this example we are just fetching block `height`, contract `address`, `id` of event and the `type` of event. We can modify the structure and shape as we want.Just like this :
 
 ```
-// This is the query 
-const EVM_EVENT_QUERY = `
+const EVM_EVENT_QUERY = gql`
     query evmEvent(
       $address: String_comparison_exp!
       $blockId: bigint_comparison_exp!
@@ -121,34 +115,11 @@ const EVM_EVENT_QUERY = `
       }
     }
   `;
-
-  const gqlObject = {query: EVM_EVENT_QUERY,
-    variables: {
-      address: { _eq: contractAddress },
-      topic0: methodSignature
-        ? { _eq: utils.keccak256(utils.toUtf8Bytes(methodSignature)) }
-        : {},
-      blockId: toBlockId
-        ? { _gte: fromBlockId, _lte: toBlockId }
-        : { _eq: fromBlockId },
-    },}
-
-  const gqlEndpoint = "https://squid.subsquid.io/reef-explorer/graphql";
-
-  const gqlReq = {
-      method: "post",
-      url: gqlEndpoint,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: gqlObject,
-    };
-  
-  // to get the response
-  const resp = await axios(gqlReq);
-  console.log(resp.data)
-
 ```
+
+To make it more intuitive you can always check the response of any query here in the graphql playground.
+
+![](/docs/developers/response_evmEvents.png)
 
 We can also find tokens and their balances for a specific account:
 ```
@@ -159,6 +130,76 @@ subscription query ($accountId: String!) {
   }
   }
 ```
+
+##### Use this data in your apps
+
+You can use this data inside your websites/apps as well. Here is a basic example for it. In this example we are using axios to make requests you can use apollo as well.
+
+Suppose you want to create an app which displays NFTs owned by the user, then here is a basic example for that.
+
+You need to write a query to fetch the NFTs, you can do it like this:
+```
+const SIGNER_NFTS_QUERY = `
+  query signer_nfts($accountId: String) {
+    tokenHolders(
+      orderBy: balance_DESC
+      limit: 199
+      where: {
+        AND: {
+          nftId_isNull: false
+          token: { id_isNull: false }
+          signer: { id_eq: $accountId }
+          balance_gt: "0"
+        }
+        type_eq: Account
+      }
+    ) {
+      token {
+        id
+        type
+      }
+      balance
+      nftId
+    }
+  }
+`;
+```
+
+We are creating a function which returns an object consisting of `query` and `variables`:
+
+```
+const getSignerNftsQuery = (accountId: string) => {
+  return {
+    query: SIGNER_NFTS_QUERY,
+    variables: { accountId },
+  };
+};
+```
+
+Specifying the Graphql Endpoint :
+```
+const gqlEndpoint = "https://squid.subsquid.io/reef-explorer/graphql";
+```
+
+Creating a request object for `axios` :
+
+```
+const requestObject = {
+      method: "post",
+      url: gqlEndpoint,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: getSignerNftsQuery(accountId),
+    };
+```
+
+Logging the response in console, you can use this to display in the frontend
+```
+const resp = await axios(gqlReq);
+console.log(resp.data.data.tokenHolders);
+```
+
 
 A few more examples can also be found in:
  - Reefscan block explorer is [open-source](https://github.com/reef-defi/reef-explorer), and all UI components use GraphQL as the backend.
