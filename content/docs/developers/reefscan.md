@@ -57,6 +57,18 @@ In this example we are querying the chain info , the parameters which we are req
 
 ![](/docs/developers/response_chainInfos.png)
 
+
+In the next example we will see how to fetch transfers count using xConnections in Graphql
+
+```
+query Last30Days {
+  transfersConnection(orderBy: timestamp_DESC, where: {timestamp_gte: "2023-08-14T04:23:50.000000Z"}) {
+    totalCount
+  }
+}
+```
+You can replace the `2023-08-14` with the date you want, here the format is `YYYY-MM-DD` . This query is fetching the transfers count which have timestamp greater than `2023-08-14T04:23:50.000000Z`
+
 ##### Subscription
 
 A `Subscription` is like a live stream that keeps sending you updates whenever something interesting happens, so you always have the latest information.
