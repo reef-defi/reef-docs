@@ -22,7 +22,7 @@ blockchain RPC, for example:
  - history of user's interaction with a smart contract
 
 
-Reefscan offers 3 solutions for various use cases:
+Reefscan offers the following solutions for various use cases:
  - GraphQL server for web apps
  - Smart contract source verification
  - HTTP API for developers
@@ -38,10 +38,13 @@ Testnet: https://squid.subsquid.io/reef-explorer-testnet/graphql
 ```
 The URIs provides a GraphQL Playground interface for testing queries aswell.
 
-![](/docs/developers/the_graph.png)
+![](/docs/developers/subsquid_playground.png)
 
 #### Examples
 The GraphQL endpoints support `Query` operations. For custom deployment `Subscription` and `Mutation` can be used. Here we will discuss examples of each of these. You can see the schema for each of these by going into corresponding docs on the top right side of Graphql playground.
+
+<img src="/docs/developers/subsquid_gql_schema.png" alt="Image Alt Text" width="250"/>
+
 
 ##### Query
 A Query is a specific request allowing user to specify structure & shape of the response they want to receive.
