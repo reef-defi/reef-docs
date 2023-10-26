@@ -1,3 +1,5 @@
+## Moved to https://github.com/reef-chain/docs
+
 ## Reef Chain Docs
 
 ### Install
